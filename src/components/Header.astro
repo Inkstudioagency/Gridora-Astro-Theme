@@ -1,0 +1,102 @@
+---
+import { getFeatures, getPortfolios } from '../lib/content';
+
+// The two "CMS Pages" links point at whichever entry the CMS returns first, so
+// they keep working when the content changes.
+const [features, portfolios] = await Promise.all([getFeatures(), getPortfolios()]);
+const featureDetailsHref = features.length ? `/features/${features[0].slug}` : '/features';
+const portfolioDetailsHref = portfolios.length ? `/portfolio/${portfolios[0].slug}` : '/';
+
+const path = Astro.url.pathname.replace(/(.)\/$/, '$1');
+const isCurrent = (href: string) => href === path;
+// Webflow marks the active link with both an aria-current attribute and the
+// `w--current` class its stylesheet targets.
+const current = (href: string) => (isCurrent(href) ? 'page' : undefined);
+const cx = (base: string, href: string) => (isCurrent(href) ? `${base} w--current` : base);
+---
+
+<header class="section_header">
+  <div data-animation="over-right" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
+    <div class="nav-inner-block">
+      <div class="container-main w-container">
+        <div class="nav-content-block">
+          <a href="/" aria-current={current('/')} class={cx('brand-logo-block w-nav-brand', '/')}><img loading="lazy" src="/images/footer-logo-2.svg" alt="footer-logo" class="brand-logo"></a>
+          <nav role="navigation" class="nav-menu-content w-nav-menu">
+            <div class="nav-link-block">
+              <div class="nav-menu-top">
+                <a href="#" class="brand-logo-block w-nav-brand"><img loading="lazy" src="/images/footer-logo-2.svg" alt="footer-logo" class="brand-logo"></a>
+                <div class="menu-button-block">
+                  <div class="menu-close-button w-nav-button">
+                    <div class="menu-button-icon w-icon-nav-menu"></div>
+                  </div>
+                </div>
+              </div>
+              <a href="/" aria-current={current('/')} class={cx('nav-link w-nav-link', '/')}>Home</a>
+              <a href="/about" aria-current={current('/about')} class={cx('nav-link w-nav-link', '/about')}>About</a>
+              <a href="/features" aria-current={current('/features')} class={cx('nav-link w-nav-link', '/features')}>Features</a>
+              <div data-delay="600" data-hover="false" data-w-id="24161b6c-c384-a9f4-aeb3-57713169f108" class="nav-link w-dropdown">
+                <div class="nav-dropdown-toggle w-dropdown-toggle">
+                  <div class="nav-dropdown-toggle-content">
+                    <div>Pages</div>
+                    <div class="nav-dropdown-icon w-icon-dropdown-toggle"></div>
+                  </div>
+                </div>
+                <nav class="nav-dropdown-content w-dropdown-list">
+                  <div class="nav-dropdown-inner">
+                    <div class="nav-dropdown-link-block">
+                      <div class="nav-dropdown-column">
+                        <div class="nav-dropdown-title">Main Pages</div>
+                        <a href="/" aria-current={current('/')} class={cx('nav-dropdown-link w-dropdown-link', '/')}>Home</a>
+                        <a href="/about" aria-current={current('/about')} class={cx('nav-dropdown-link w-dropdown-link', '/about')}>About</a>
+                        <a href="/features" aria-current={current('/features')} class={cx('nav-dropdown-link w-dropdown-link', '/features')}>Features</a>
+                        <a href="/contact" aria-current={current('/contact')} class={cx('nav-dropdown-link w-dropdown-link', '/contact')}>Contact</a>
+                        <a href="#" class="nav-dropdown-link w-dropdown-link">Instruction</a>
+                      </div>
+                      <div class="nav-dropdown-column is-2">
+                        <div class="nav-dropdown-title">CMS Pages</div>
+                        <a href={featureDetailsHref} class="nav-dropdown-link w-dropdown-link">Feature Details</a>
+                        <a href={portfolioDetailsHref} class="nav-dropdown-link w-dropdown-link">Portfolio Details</a>
+                      </div>
+                      <div class="nav-dropdown-column">
+                        <div class="nav-dropdown-title">Utility Pages</div>
+                        <a href="/style-guide" aria-current={current('/style-guide')} class={cx('nav-dropdown-link w-dropdown-link', '/style-guide')}>Style Guide</a>
+                        <a href="#" class="nav-dropdown-link w-dropdown-link">Changelog</a>
+                        <a href="#" class="nav-dropdown-link w-dropdown-link">Licenses</a>
+                        <a href="/404" aria-current={current('/404')} class={cx('nav-dropdown-link w-dropdown-link', '/404')}>Not Found</a>
+                        <a href="/password" aria-current={current('/password')} class={cx('nav-dropdown-link w-dropdown-link', '/password')}>Password</a>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+              <div class="general-button-block is-1">
+                <a href="#" data-wf--primary-button--variant="varient-2" class="primary-button w-variant-c5023870-c223-3ae6-4ada-3b83d947fba3 w-inline-block">
+                  <div class="button-text-block">
+                    <div class="button-text is-1">Get Started</div>
+                    <div class="button-text is-2">Get Started</div>
+                  </div>
+                </a>
+              </div>
+              <a href="/contact" aria-current={current('/contact')} class={cx('nav-link w-nav-link', '/contact')}>Contact</a>
+            </div>
+          </nav>
+          <div class="nav-button-block">
+            <div class="general-button-block is-2">
+              <a href="/contact" data-wf--primary-button--variant="varient-2" class="primary-button w-variant-c5023870-c223-3ae6-4ada-3b83d947fba3 w-inline-block">
+                <div class="button-text-block">
+                  <div class="button-text is-1">Get Started</div>
+                  <div class="button-text is-2">Get Started</div>
+                </div>
+              </a>
+            </div>
+            <div class="menu-button-block">
+              <div class="menu-open-button w-nav-button">
+                <div class="menu-button-icon w-icon-nav-menu"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

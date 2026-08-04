@@ -1,0 +1,159 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getFeatures, splitHeading } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const features = await getFeatures();
+  return features.map((feature) => ({ params: { slug: feature.slug }, props: { feature } }));
+}
+
+const { feature } = Astro.props;
+const [detailsHead, detailsTail] = splitHeading(feature.detailsTitle);
+---
+
+<Layout title={`${feature.title} || AI technology Astro theme`} description={feature.summary} pageId="6a706af464122f0e823f2947">
+      <main class="main-wrapper">
+        <section class="section_breadcrumb">
+          <div class="w-layout-blockcontainer container-main w-container">
+            <div class="breadcrumb-wrapper">
+              <div class="breadcrumb-content-block">
+                <div class="breadcrumb-subtitle-block">
+                  <div class="breadcrumb-subtitle-icon w-embed"><svg width="31" height="16" viewbox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 1.2931C0 0.578942 0.578942 0 1.2931 0H7C11.4183 0 15 3.58172 15 8C15 12.4183 11.4183 16 7 16H1.2931C0.578942 16 0 15.4211 0 14.7069V1.2931Z" fill="white"></path>
+                      <path d="M15 0.689655C15 0.308769 15.3088 0 15.6897 0C19.727 0 23 3.27295 23 7.31034V8.68966C23 12.727 19.727 16 15.6897 16C15.3088 16 15 15.6912 15 15.3103V0.689655Z" fill="white"></path>
+                      <path d="M23 0.689655C23 0.308769 23.3088 0 23.6897 0C27.727 0 31 3.27295 31 7.31034V8.68966C31 12.727 27.727 16 23.6897 16C23.3088 16 23 15.6912 23 15.3103V0.689655Z" fill="white"></path>
+                    </svg></div>
+                  <div class="text-size-small text-weight-medium text-color-white">Features Details</div>
+                </div>
+                <div class="breadcrumb-title-block">
+                  <h1 class="heading-style-1 title-animation">{feature.title}</h1>
+                </div>
+                <div class="breadcrumb-summary-block">
+                  <p class="text-size-large text-color-heading-color-0-8">{feature.summary}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section_features-details">
+          <div class="section-gap">
+            <div class="w-layout-blockcontainer container-main w-container">
+              <div class="features-details-wrapper">
+                <div class="section-heading-block top-flex">
+                  <div class="section-subtitle-block large"><img loading="lazy" src="/images/subtitle-icon.svg" alt="subtitle-icon" class="subtitle-icon">
+                    <div class="text-size-small text-weight-medium text-color-white">Overview</div>
+                  </div>
+                  <div class="section-heading-text-block max-width-28-125rem">
+                    <div class="section-title-block">
+                      <h2 class="heading-style-2">{detailsHead}<span class="heading-style-2-ht">{detailsTail}</span></h2>
+                    </div>
+                    <div class="section-summary-block top-space max-width-21-5rem">
+                      <p class="text-size-large">{feature.detailsSummary}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="features-details-content-block">
+                  <div data-w-id="705f19c5-90a7-b9f4-b970-060ec9ad18dd" style="opacity:0;-webkit-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);filter:blur(12px)" class="features-details-text-block">
+                    <div class="features-details-text w-richtext"><Fragment set:html={feature.detailsText} /></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section_our-number">
+          <div class="section-gap">
+            <div class="w-layout-blockcontainer container-main w-container">
+              <div class="our-result-wrapper">
+                <div class="section-heading-block top-flex">
+                  <div class="section-subtitle-block"><img src="/images/subtitle-icon.svg" loading="lazy" alt="subtitle-icon" class="subtitle-icon">
+                    <div class="text-size-small text-weight-medium text-color-white">Numbers</div>
+                  </div>
+                  <div class="section-heading-text-block max-width-33-5rem">
+                    <div class="section-title-block">
+                      <h2 class="heading-style-2 title-animation">Performance Metrics</h2>
+                    </div>
+                    <div class="section-summary-block top-space">
+                      <p class="text-size-large">Aura AI combines cutting-edge machine learning with a user-friendly interface to help you make better decisions.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="our-result-content-block">
+                  <div class="our-number-card-block">
+                    <div class="our-result-card-text-block">
+                      <h3 class="heading-style-5 mobile-sm">Processing Speed</h3>
+                    </div>
+                    <div class="our-result-card-number-block">
+                      <div class="result-number counter-anim">{feature.processingSpeed}</div>
+                      <div class="result-number"><span class="result-number-unit">dp/sec</span></div>
+                    </div>
+                  </div>
+                  <div class="our-number-card-block is-2">
+                    <div class="our-result-card-text-block">
+                      <h3 class="heading-style-5 mobile-sm">Average Response Time</h3>
+                    </div>
+                    <div class="our-result-card-number-block">
+                      <div class="result-number counter-anim">{feature.averageResponseTime}</div>
+                    </div>
+                  </div>
+                  <div class="our-number-card-block is-3">
+                    <div class="our-result-card-text-block">
+                      <h3 class="heading-style-5 mobile-sm">Accuracy Rate</h3>
+                    </div>
+                    <div class="our-result-card-number-block">
+                      <div class="result-number counter-anim">{feature.accuracyRate}</div>
+                    </div>
+                  </div>
+                  <div class="our-number-card-block is-4">
+                    <div class="our-result-card-text-block">
+                      <h3 class="heading-style-5 mobile-sm">Concurrent Users</h3>
+                    </div>
+                    <div class="our-result-card-number-block">
+                      <div class="result-number counter-anim">{feature.concurrentUsers}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section_cta">
+          <div class="section-gap">
+            <div class="w-layout-blockcontainer container-main w-container">
+              <div class="cta-wrapper">
+                <div class="cta-content-block">
+                  <div data-w-id="53cb5297-990c-9364-7ad8-fd5810eb3b07" class="cta-title-block">
+                    <h2 class="heading-style-2 text-align-center text-color-heading-color title-animation">Ready To Build The Future Of Your Business?</h2>
+                  </div>
+                  <div data-w-id="53cb5297-990c-9364-7ad8-fd5810eb3b0a" class="cta-summary-block">
+                    <p class="text-size-large text-align-middle text-color-heading-color-0-8">Join 10,000+ companies who use Aura AI to scale their intelligence and automate their workflows.</p>
+                  </div>
+                  <div data-w-id="53cb5297-990c-9364-7ad8-fd5810eb3b0d" class="cta-avatar-block"><img loading="lazy" src="/images/cta-avatar-1.svg" alt="cta-avatar" class="cta-avatar is-1"><img loading="lazy" src="/images/cta-avatar-2.svg" alt="cta-avatar" class="cta-avatar"><img loading="lazy" src="/images/cta-avatar-3.svg" alt="cta-avatar" class="cta-avatar"><img loading="lazy" src="/images/cta-avatar-4.svg" alt="cta-avatar" class="cta-avatar"></div>
+                  <div data-w-id="53cb5297-990c-9364-7ad8-fd5810eb3b12" class="cta-button-block">
+                    <a href="/contact" data-wf--primary-button--variant="varient-3" class="primary-button w-variant-cb037575-caf5-14db-03c9-2aab23927600 w-inline-block">
+                      <div class="button-text-block">
+                        <div class="button-text is-1">Get Started Now</div>
+                        <div class="button-text is-2">Get Started Now</div>
+                      </div>
+                    </a>
+                    <a href="/contact" class="secondary-button w-inline-block">
+                      <div class="button-text-block">
+                        <div class="button-text is-1">Talk to Sales</div>
+                        <div class="button-text is-2">Talk to Sales</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="page-liner-block">
+          <div class="page-liner"></div>
+          <div class="page-liner"></div>
+          <div class="page-liner"></div>
+          <div class="page-liner"></div>
+          <div class="page-liner"></div>
+        </div>
+      </main>
+</Layout>

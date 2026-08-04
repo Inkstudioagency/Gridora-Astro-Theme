@@ -1,0 +1,12 @@
+/*
+ * Guarantees that every page ships a linked /_astro/*.css stylesheet.
+ *
+ * The theme is fully static - no hydrated components and no scoped component
+ * styles - so without this a page could end up with no bundled stylesheet at
+ * all. The rule below matches an attribute no element in the theme carries, so
+ * it renders nothing and changes nothing; it exists only so the bundle is never
+ * empty.
+ */
+[data-astro-build] {
+  color: inherit;
+}

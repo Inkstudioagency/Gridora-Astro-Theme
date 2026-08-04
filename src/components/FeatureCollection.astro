@@ -1,0 +1,28 @@
+---
+import FeatureCard from './FeatureCard.astro';
+import type { Feature } from '../lib/content';
+
+interface Props {
+  features: Feature[];
+  /** Interaction id applied to each card. Desktop grid only. */
+  wId?: string;
+}
+
+const { features, wId } = Astro.props;
+---
+
+<div class="feature-collection-block w-dyn-list">
+  {features.length ? (
+    <div role="list" class="feature-collection-list w-dyn-items">
+      {features.map((feature) => (
+        <div role="listitem" class="feature-collection-item w-dyn-item">
+          <FeatureCard feature={feature} wId={wId} />
+        </div>
+      ))}
+    </div>
+  ) : (
+    <div class="w-dyn-empty">
+      <div>No items found.</div>
+    </div>
+  )}
+</div>

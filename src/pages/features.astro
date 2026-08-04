@@ -1,0 +1,166 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FeatureCollection from '../components/FeatureCollection.astro';
+import FeatureSlider from '../components/FeatureSlider.astro';
+import { getFeatures } from '../lib/content';
+
+const features = await getFeatures();
+---
+
+<Layout title="Features || AI technology Astro theme" pageId="6a706af464122f0e823f294d">
+      <main class="main-wrapper">
+        <section class="section_features">
+          <div class="section-gap">
+            <div class="w-layout-blockcontainer container-main w-container">
+              <div class="features-wrapper">
+                <div class="section-heading-block top-flex">
+                  <div class="section-subtitle-block"><img loading="lazy" src="/images/subtitle-icon.svg" alt="subtitle-icon" class="subtitle-icon">
+                    <div class="text-size-small text-weight-medium text-color-white">Features</div>
+                  </div>
+                  <div class="section-heading-text-block max-width-33-5rem">
+                    <div class="section-title-block">
+                      <h2 class="heading-style-2 title-animation">Everything You Need To <span class="heading-style-2-ht">Scale Intelligence</span></h2>
+                    </div>
+                    <div data-w-id="a2d80a55-e00e-5224-3a11-648502aa340d" class="section-summary-block top-space">
+                      <p class="text-size-large">Aura AI combines cutting-edge machine learning with a user-friendly interface to help you make better decisions.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="features-content-block is-desktop">
+                  <FeatureCollection features={features} wId="a2d80a55-e00e-5224-3a11-648502aa3414" />
+                </div>
+                <FeatureSlider features={features} />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section_faq">
+          <div class="section-gap">
+            <div class="w-layout-blockcontainer container-main w-container">
+              <div class="faq-wrapper">
+                <div class="faq-heading-block">
+                  <div class="section-heading-block">
+                    <div class="section-subtitle-block"><img loading="lazy" src="/images/subtitle-icon.svg" alt="subtitle-icon" class="subtitle-icon">
+                      <div class="text-size-small text-weight-medium text-color-white">Process</div>
+                    </div>
+                    <div class="section-title-block top-space max-width-20rem">
+                      <h2 class="heading-style-2 title-animation">Frequently <span class="heading-style-2-ht">Ask Question</span></h2>
+                    </div>
+                    <div class="section-summary-block top-space">
+                      <p class="text-size-large">Have questions? We’ve got the answers. Our FAQ section is designed to give you quick and clear information.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="faq-content-block">
+                  <div data-w-id="2296c4a0-5e91-b238-bd38-ff1de7a8a0c9" class="faq-dropdown-block">
+                    <div class="faq-dropdown-question-block">
+                      <h3 class="heading-style-5 none-capitalize">Do I need to be technical to use Gridora?</h3>
+                      <div class="faq-dropdown-icon-block">
+                        <div class="faq-icon-line"></div>
+                        <div class="faq-icon-line is-2"></div>
+                      </div>
+                    </div>
+                    <div class="faq-dropdown-ans-block">
+                      <div class="faq-dropdown-ans-inner">
+                        <p class="text-size-large">Not at all! Gridora is designed for people who aren&#x27;t tech experts. You just type your question in plain English — the same way you&#x27;d ask a colleague — and Gridora gives you a clear, simple answer. There&#x27;s nothing to configure, no code to write, and no special skills needed.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-w-id="2296c4a0-5e91-b238-bd38-ff1de7a8a0d4" class="faq-dropdown-block">
+                    <div class="faq-dropdown-question-block">
+                      <h3 class="heading-style-5 none-capitalize">How does it actually work?</h3>
+                      <div class="faq-dropdown-icon-block">
+                        <div class="faq-icon-line"></div>
+                        <div class="faq-icon-line is-2"></div>
+                      </div>
+                    </div>
+                    <div class="faq-dropdown-ans-block">
+                      <div class="faq-dropdown-ans-inner">
+                        <p class="text-size-large">Not at all! Gridora is designed for people who aren&#x27;t tech experts. You just type your question in plain English — the same way you&#x27;d ask a colleague — and Gridora gives you a clear, simple answer. There&#x27;s nothing to configure, no code to write, and no special skills needed.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-w-id="2296c4a0-5e91-b238-bd38-ff1de7a8a0df" class="faq-dropdown-block">
+                    <div class="faq-dropdown-question-block">
+                      <h3 class="heading-style-5 none-capitalize">Is my information safe?</h3>
+                      <div class="faq-dropdown-icon-block">
+                        <div class="faq-icon-line"></div>
+                        <div class="faq-icon-line is-2"></div>
+                      </div>
+                    </div>
+                    <div class="faq-dropdown-ans-block">
+                      <div class="faq-dropdown-ans-inner">
+                        <p class="text-size-large">Not at all! Gridora is designed for people who aren&#x27;t tech experts. You just type your question in plain English — the same way you&#x27;d ask a colleague — and Gridora gives you a clear, simple answer. There&#x27;s nothing to configure, no code to write, and no special skills needed.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-w-id="2296c4a0-5e91-b238-bd38-ff1de7a8a0ea" class="faq-dropdown-block">
+                    <div class="faq-dropdown-question-block">
+                      <h3 class="heading-style-5 none-capitalize">What kind of apps can I connect?</h3>
+                      <div class="faq-dropdown-icon-block">
+                        <div class="faq-icon-line"></div>
+                        <div class="faq-icon-line is-2"></div>
+                      </div>
+                    </div>
+                    <div class="faq-dropdown-ans-block">
+                      <div class="faq-dropdown-ans-inner">
+                        <p class="text-size-large">Not at all! Gridora is designed for people who aren&#x27;t tech experts. You just type your question in plain English — the same way you&#x27;d ask a colleague — and Gridora gives you a clear, simple answer. There&#x27;s nothing to configure, no code to write, and no special skills needed.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-w-id="2296c4a0-5e91-b238-bd38-ff1de7a8a0f5" class="faq-dropdown-block">
+                    <div class="faq-dropdown-question-block">
+                      <h3 class="heading-style-5 none-capitalize">How much does it cost?</h3>
+                      <div class="faq-dropdown-icon-block">
+                        <div class="faq-icon-line"></div>
+                        <div class="faq-icon-line is-2"></div>
+                      </div>
+                    </div>
+                    <div class="faq-dropdown-ans-block">
+                      <div class="faq-dropdown-ans-inner">
+                        <p class="text-size-large">Not at all! Gridora is designed for people who aren&#x27;t tech experts. You just type your question in plain English — the same way you&#x27;d ask a colleague — and Gridora gives you a clear, simple answer. There&#x27;s nothing to configure, no code to write, and no special skills needed.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-w-id="2296c4a0-5e91-b238-bd38-ff1de7a8a100" class="faq-dropdown-block">
+                    <div class="faq-dropdown-question-block">
+                      <h3 class="heading-style-5 none-capitalize">What if I need help getting set up?</h3>
+                      <div class="faq-dropdown-icon-block">
+                        <div class="faq-icon-line"></div>
+                        <div class="faq-icon-line is-2"></div>
+                      </div>
+                    </div>
+                    <div class="faq-dropdown-ans-block">
+                      <div class="faq-dropdown-ans-inner">
+                        <p class="text-size-large">Not at all! Gridora is designed for people who aren&#x27;t tech experts. You just type your question in plain English — the same way you&#x27;d ask a colleague — and Gridora gives you a clear, simple answer. There&#x27;s nothing to configure, no code to write, and no special skills needed.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-w-id="2296c4a0-5e91-b238-bd38-ff1de7a8a10b" class="faq-dropdown-block">
+                    <div class="faq-dropdown-question-block">
+                      <h3 class="heading-style-5 none-capitalize">Can I cancel anytime?</h3>
+                      <div class="faq-dropdown-icon-block">
+                        <div class="faq-icon-line"></div>
+                        <div class="faq-icon-line is-2"></div>
+                      </div>
+                    </div>
+                    <div class="faq-dropdown-ans-block">
+                      <div class="faq-dropdown-ans-inner">
+                        <p class="text-size-large">Not at all! Gridora is designed for people who aren&#x27;t tech experts. You just type your question in plain English — the same way you&#x27;d ask a colleague — and Gridora gives you a clear, simple answer. There&#x27;s nothing to configure, no code to write, and no special skills needed.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="page-liner-block">
+          <div class="page-liner"></div>
+          <div class="page-liner"></div>
+          <div class="page-liner"></div>
+          <div class="page-liner"></div>
+          <div class="page-liner"></div>
+        </div>
+      </main>
+</Layout>

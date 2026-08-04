@@ -1,0 +1,95 @@
+---
+const path = Astro.url.pathname.replace(/(.)\/$/, '$1');
+const isCurrent = (href: string) => href === path;
+const current = (href: string) => (isCurrent(href) ? 'page' : undefined);
+const cx = (base: string, href: string) => (isCurrent(href) ? `${base} w--current` : base);
+---
+
+<footer class="section_footer">
+  <div class="section-gap-sm top-gap">
+    <div class="w-layout-blockcontainer container-main w-container">
+      <div class="footer-wrapper">
+        <div class="footer-content-block">
+          <div class="footer-main-content-block">
+            <div class="footer-info-content-block">
+              <a href="/" aria-current={current('/')} class={cx('footer-logo-block w-inline-block', '/')}><img src="/images/footer-logo-2.svg" loading="lazy" alt="footer-logo" class="footer-logo"></a>
+              <div class="footer-summary-block">
+                <p class="text-size-regular text-color-white-0-8">Empowering the next generation of intelligent enterprises with cutting-edge AI technology to scale your growth.</p>
+              </div>
+              <div class="footer-social-info-block">
+                <a aria-label="footer-social-icon-block" href="https://x.com/" target="_blank" class="footer-social-icon-block w-inline-block">
+                  <div class="footer-social-icon w-embed"><svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M29.3327 5.33467C29.3327 5.33467 28.3993 8.13467 26.666 9.868C28.7993 23.2013 14.1327 32.9347 2.66602 25.3347C5.59935 25.468 8.53268 24.5347 10.666 22.668C3.99935 20.668 0.666016 12.8013 3.99935 6.668C6.93268 10.1347 11.466 12.1347 15.9993 12.0013C14.7993 6.40133 21.3327 3.20133 25.3327 6.93467C26.7993 6.93467 29.3327 5.33467 29.3327 5.33467Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></div>
+                </a>
+                <a aria-label="footer-social-icon-block" href="https://linkedin.com/" target="_blank" class="footer-social-icon-block w-inline-block">
+                  <div class="footer-social-icon w-embed"><svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21.334 10.668C23.4557 10.668 25.4905 11.5108 26.9908 13.0111C28.4911 14.5114 29.334 16.5462 29.334 18.668V28.0013H24.0007V18.668C24.0007 17.9607 23.7197 17.2824 23.2196 16.7824C22.7195 16.2823 22.0412 16.0013 21.334 16.0013C20.6267 16.0013 19.9485 16.2823 19.4484 16.7824C18.9483 17.2824 18.6673 17.9607 18.6673 18.668V28.0013H13.334V18.668C13.334 16.5462 14.1768 14.5114 15.6771 13.0111C17.1774 11.5108 19.2123 10.668 21.334 10.668Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M8.0013 12H2.66797V28H8.0013V12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M5.33073 8.0013C6.80349 8.0013 7.9974 6.80739 7.9974 5.33464C7.9974 3.86188 6.80349 2.66797 5.33073 2.66797C3.85797 2.66797 2.66406 3.86188 2.66406 5.33464C2.66406 6.80739 3.85797 8.0013 5.33073 8.0013Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></div>
+                </a>
+                <a aria-label="footer-social-icon-block" href="https://github.com/" target="_blank" class="footer-social-icon-block w-inline-block">
+                  <div class="footer-social-icon w-embed"><svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.0023 29.3346V24.0013C20.1878 22.331 19.7089 20.6548 18.669 19.3346C22.669 19.3346 26.669 16.668 26.669 12.0013C26.7757 10.3346 26.309 8.69464 25.3357 7.33464C25.709 5.8013 25.709 4.2013 25.3357 2.66797C25.3357 2.66797 24.0023 2.66797 21.3357 4.66797C17.8157 4.0013 14.189 4.0013 10.669 4.66797C8.00233 2.66797 6.66899 2.66797 6.66899 2.66797C6.26899 4.2013 6.26899 5.8013 6.66899 7.33464C5.69816 8.68915 5.22696 10.3384 5.33566 12.0013C5.33566 16.668 9.33566 19.3346 13.3357 19.3346C12.8157 19.988 12.429 20.7346 12.2023 21.5346C11.9757 22.3346 11.909 23.1746 12.0023 24.0013V29.3346" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M11.9993 23.9987C5.98602 26.6654 5.33268 21.332 2.66602 21.332" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></div>
+                </a>
+                <a aria-label="footer-social-icon-block" href="https://www.instagram.com/" target="_blank" class="footer-social-icon-block w-inline-block">
+                  <div class="footer-social-icon w-embed"><svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.6641 2.66797H9.33073C5.64883 2.66797 2.66406 5.65274 2.66406 9.33463V22.668C2.66406 26.3499 5.64883 29.3346 9.33073 29.3346H22.6641C26.346 29.3346 29.3307 26.3499 29.3307 22.668V9.33463C29.3307 5.65274 26.346 2.66797 22.6641 2.66797Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M21.3336 15.1604C21.4981 16.2701 21.3086 17.4034 20.7919 18.3991C20.2753 19.3948 19.4578 20.2023 18.4558 20.7066C17.4537 21.211 16.3182 21.3865 15.2106 21.2083C14.1031 21.0301 13.0799 20.5072 12.2867 19.7139C11.4935 18.9207 10.9706 17.8976 10.7924 16.79C10.6141 15.6825 10.7897 14.5469 11.294 13.5449C11.7984 12.5429 12.6058 11.7254 13.6016 11.2087C14.5973 10.6921 15.7306 10.5025 16.8403 10.6671C17.9722 10.8349 19.0201 11.3624 19.8292 12.1715C20.6383 12.9806 21.1657 14.0285 21.3336 15.1604Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M23.334 8.66797H23.3473" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></div>
+                </a>
+              </div>
+            </div>
+            <div class="footer-link-content-block">
+              <div class="footer-link-block">
+                <div class="footer-link-title">Company</div>
+                <a href="/" aria-current={current('/')} class={cx('footer-link', '/')}>Home</a>
+                <a href="/about" aria-current={current('/about')} class={cx('footer-link', '/about')}>About Us</a>
+                <a href="/features" aria-current={current('/features')} class={cx('footer-link', '/features')}>Features</a>
+                <a href="/contact" aria-current={current('/contact')} class={cx('footer-link', '/contact')}>Contact</a>
+              </div>
+              <div class="footer-contact-info-block">
+                <div class="footer-link-title">Contact</div>
+                <div class="footer-contact-single-block">
+                  <div class="footer-contact-text-block">
+                    <div class="paragraph-xsmall text-color-white">Email Address</div>
+                    <a href="mailto:hello@example.com" class="footer-contact-link">hello@example.com</a>
+                  </div>
+                </div>
+                <div class="footer-contact-single-block">
+                  <div class="footer-contact-text-block">
+                    <div class="paragraph-xsmall text-color-white">Phone Number</div>
+                    <a href="tel:+1(555)123-4567" class="footer-contact-link">+1 (555) 123-4567</a>
+                  </div>
+                </div>
+                <div class="footer-contact-single-block">
+                  <div class="footer-contact-text-block">
+                    <div class="paragraph-xsmall text-color-white">Address</div>
+                    <div class="footer-contact-link hover-none">Example DRE #01521930</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom-block">
+          <div class="footer-bottom-content-block">
+            <div class="copyright-text-block">
+              <p class="paragraph-small text-color-white mobile-middle">Copyright © Gridora | Designed by <a href="https://www.inks.studio/" target="_blank" class="text-color-white text-weight-semibold hover">Ink Studio</a> - Powered by <a href="https://astro.build/themes/author/3299" target="_blank" class="text-color-white text-weight-semibold hover">Astro</a>
+              </p>
+            </div>
+            <div class="footer-bottom-link-block">
+              <a href="/style-guide" aria-current={current('/style-guide')} class={cx('footer-bottom-link', '/style-guide')}>Style Guide</a>
+              <a href="/404" aria-current={current('/404')} class={cx('footer-bottom-link', '/404')}>Not Found</a>
+            </div>
+          </div>
+          <div class="footer-logo-content-block"><img loading="lazy" src="/images/footer-bottom-logo.svg" alt="footer-bottom-logo" class="footer-bottom-logo"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,26 @@
+---
+import type { Feature } from '../lib/content';
+
+interface Props {
+  feature: Feature;
+  /**
+   * Webflow interaction id for the card hover. Only the desktop grid carries
+   * it; the mobile slider cards are plain.
+   */
+  wId?: string;
+}
+
+const { feature, wId } = Astro.props;
+---
+
+<a aria-label="feature-card-item-block" data-w-id={wId} href={`/features/${feature.slug}`} class="feature-card-item-block w-inline-block">
+  <div class="feature-card-icon-block"><img loading="lazy" src={feature.icon} alt={feature.title} class="feature-card-icon"></div>
+  <div class="feature-card-content-block">
+    <div class="feature-card-title-block">
+      <h3 class="heading-style-5">{feature.title}</h3>
+    </div>
+    <div class="feature-card-summary-block">
+      <p class="text-size-regular">{feature.summary}</p>
+    </div>
+  </div>
+</a>

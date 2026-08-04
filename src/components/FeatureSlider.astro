@@ -1,0 +1,30 @@
+---
+import FeatureCollection from './FeatureCollection.astro';
+import type { Feature } from '../lib/content';
+
+interface Props {
+  features: Feature[];
+}
+
+// The mobile view shows one feature per slide.
+const { features } = Astro.props;
+---
+
+<div data-w-id="c0637579-fe86-0951-5acb-c78f5ed0c829" class="features-content-block is-mobile">
+  <div data-delay="4000" data-animation="slide" class="mobile-slider-block w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+    <div class="mobile-slider-mask w-slider-mask">
+      {features.map((feature) => (
+        <div class="mobile-slide-block w-slide">
+          <FeatureCollection features={[feature]} />
+        </div>
+      ))}
+    </div>
+    <div class="mobile-slider-arrow left w-slider-arrow-left">
+      <div class="features-arrow-icon w-icon-slider-left"></div>
+    </div>
+    <div class="mobile-slider-arrow right w-slider-arrow-right">
+      <div class="w-icon-slider-right"></div>
+    </div>
+    <div class="display-none w-slider-nav w-round w-num"></div>
+  </div>
+</div>

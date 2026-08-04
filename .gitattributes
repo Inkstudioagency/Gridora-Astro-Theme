@@ -1,0 +1,10 @@
+# Keep line endings stable across Windows/macOS/Linux checkouts.
+* text=auto eol=lf
+
+# Binary assets
+*.avif binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.ico  binary

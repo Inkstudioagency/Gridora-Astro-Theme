@@ -1,0 +1,27 @@
+---
+import CaseStudyCard from './CaseStudyCard.astro';
+import type { Portfolio } from '../lib/content';
+
+interface Props {
+  portfolio?: Portfolio;
+  position: number;
+  cardWId?: string;
+  buttonWId: string;
+}
+
+// Each slot in the staggered case-study grid is its own collection block, so an
+// empty slot falls back to Webflow's "No items found." state.
+const { portfolio, position, cardWId, buttonWId } = Astro.props;
+---
+
+<div class={`case-study-collection-block is-${position} w-dyn-list`}>
+  {portfolio ? (
+    <div role="list" class="case-study-collection-list w-dyn-items">
+      <CaseStudyCard portfolio={portfolio} position={position} cardWId={cardWId} buttonWId={buttonWId} />
+    </div>
+  ) : (
+    <div class="w-dyn-empty">
+      <div>No items found.</div>
+    </div>
+  )}
+</div>

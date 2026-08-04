@@ -1,0 +1,668 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FeatureCollection from '../components/FeatureCollection.astro';
+import FeatureSlider from '../components/FeatureSlider.astro';
+import CaseStudyCollection from '../components/CaseStudyCollection.astro';
+import { getFeatures, getPortfolios } from '../lib/content';
+import pageStyle from '../styles/page-index.css?raw';
+
+const [features, portfolios] = await Promise.all([getFeatures(), getPortfolios()]);
+---
+
+<Layout title="Gridora - AI Technology Astro Theme" pageId="6a706af464122f0e823f2941" pageStyle={pageStyle}>
+      <main class="main-wrapper">
+        <section class="section_hero">
+          <div class="w-layout-blockcontainer container-main w-container">
+            <div class="hero-wrapper">
+              <div class="hero-content-block">
+                <div class="hero-text-block">
+                  <div class="hero-title-block">
+                    <h1 class="heading-style-1 title-animation">Supercharge Your Workflow With Gridora</h1>
+                  </div>
+                  <div class="hero-summary-block">
+                    <p class="text-size-large title-text-color-0-8">Automate complex tasks, analyze data in seconds, and scale your business with the world&#x27;s most intuitive AI platform.</p>
+                  </div>
+                  <div class="hero-button-block">
+                    <a href="/contact" data-wf--primary-button--variant="varient-3" class="primary-button w-variant-cb037575-caf5-14db-03c9-2aab23927600 w-inline-block">
+                      <div class="button-text-block">
+                        <div class="button-text is-1">Start for Free</div>
+                        <div class="button-text is-2">Start for Free</div>
+                      </div>
+                    </a>
+                    <a href="/features" class="secondary-button w-inline-block">
+                      <div class="button-text-block">
+                        <div class="button-text is-1">Watch Demo</div>
+                        <div class="button-text is-2">Watch Demo</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="hero-rating-block">
+                  <div class="hero-rating-avatar-block"><img style="opacity:0" data-w-id="f18a2419-6c7c-ef8d-d5d0-25b75cf0234e" alt="hero-rating-avatar" src="/images/hero-rating-avatar_1hero-rating-avatar.avif" loading="lazy" class="hero-rating-avatar is-1"><img style="opacity:0" data-w-id="f18a2419-6c7c-ef8d-d5d0-25b75cf0234f" alt="hero-rating-avatar" src="/images/hero-rating-avatar-1_1hero-rating-avatar-1.avif" loading="lazy" class="hero-rating-avatar"><img style="opacity:0" data-w-id="f18a2419-6c7c-ef8d-d5d0-25b75cf02350" alt="hero-rating-avatar" src="/images/hero-rating-avatar-2_1hero-rating-avatar-2.avif" loading="lazy" class="hero-rating-avatar"><img style="opacity:0" data-w-id="897ad338-545e-d72c-8e58-f00131cebfca" alt="hero-rating-avatar" src="/images/hero-rating-avatar-3_1hero-rating-avatar-3.avif" loading="lazy" class="hero-rating-avatar"></div>
+                  <div data-w-id="f18a2419-6c7c-ef8d-d5d0-25b75cf02351" style="opacity:0" class="hero-rating-info-block">
+                    <div class="hero-rating-star-block"><img loading="lazy" src="/images/Star-Icon.svg" alt="hero-rating-star" class="hero-rating-star"><img loading="lazy" src="/images/Star-Icon.svg" alt="hero-rating-star" class="hero-rating-star"><img loading="lazy" src="/images/Star-Icon.svg" alt="hero-rating-star" class="hero-rating-star"><img loading="lazy" src="/images/Star-Icon.svg" alt="hero-rating-star" class="hero-rating-star"><img loading="lazy" src="/images/Star-Icon.svg" alt="hero-rating-star" class="hero-rating-star right-space">
+                      <p class="text-size-xsmall title-text-color text-weight-medium">4.9/5</p>
+                    </div>
+                    <p class="text-size-large title-text-color"><span class="title-text-color-0-8">Based on reviews</span> 128 Peoples</p>
+                  </div>
+                </div>
+              </div>
+              <div data-w-id="415faf7b-8eed-2024-f216-4356872adf29" style="opacity:0;-webkit-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);filter:blur(12px)" class="hero-image-block"><img src="/images/Hero-Image.svg" loading="eager" alt="hero-image" class="hero-image"></div>
+            </div>
+          </div>
+        </section>
+        <section class="section_logo">
+          <div class="w-layout-blockcontainer container-main w-container">
+            <div data-w-id="a21169c4-4f1c-21a2-88c4-8369109ccd61" class="logo-wrapper">
+              <div data-w-id="5871f677-a8c3-bb1e-1526-9804bcac0532" class="logo-content-block">
+                <div class="logo-row-block"><img src="/images/Logo.svg" loading="lazy" alt="logo" class="logo"><img src="/images/Logo-3_1.svg" loading="lazy" alt="logo" class="logo"><img src="/images/Logo-1.svg" loading="lazy" alt="logo" class="logo"><img src="/images/Logo-2.svg" loading="lazy" alt="logo" class="logo"><img src="/images/Logo.svg" loading="lazy" alt="logo" class="logo"><img src="/images/Logo-3_1.svg" loading="lazy" alt="logo" class="logo"><img src="/images/Logo-1.svg" loading="lazy" alt="logo" class="logo"><img src="/images/Logo-2.svg" loading="lazy" alt="logo" class="logo"><img src="/images/Logo.svg" loading="lazy" alt="logo" class="logo"><img src="/images/Logo-3_1.svg" loading="lazy" alt="logo" class="logo"><img src="/images/Logo-1.svg" loading="lazy" alt="logo" class="logo"><img src="/images/Logo-2.svg" loading="lazy" alt="logo" class="logo"></div>
+                <div class="logo-row-block"><img src="/images/Logo.svg" loading="lazy" alt="logo" class="logo"><img src="/images/Logo-3_1.svg" loading="lazy" alt="logo" class="logo"><img src="/images/Logo-1.svg" loading="lazy" alt="logo" class="logo"><img src="/images/Logo-2.svg" loading="lazy" alt="logo" class="logo"><img src="/images/Logo.svg" loading="lazy" alt="logo" class="logo"><img src="/images/Logo-3_1.svg" loading="lazy" alt="logo" class="logo"><img src="/images/Logo-1.svg" loading="lazy" alt="logo" class="logo"><img src="/images/Logo-2.svg" loading="lazy" alt="logo" class="logo"><img src="/images/Logo.svg" loading="lazy" alt="logo" class="logo"><img src="/images/Logo-3_1.svg" loading="lazy" alt="logo" class="logo"><img src="/images/Logo-1.svg" loading="lazy" alt="logo" class="logo"><img src="/images/Logo-2.svg" loading="lazy" alt="logo" class="logo"></div>
+                <div class="logo-overlay-block"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section_features">
+          <div class="section-gap">
+            <div class="w-layout-blockcontainer container-main w-container">
+              <div class="features-wrapper">
+                <div class="section-heading-block top-flex">
+                  <div class="section-subtitle-block"><img loading="lazy" src="/images/subtitle-icon.svg" alt="subtitle-icon" class="subtitle-icon">
+                    <div class="text-size-small text-weight-medium text-color-white">Features</div>
+                  </div>
+                  <div class="section-heading-text-block max-width-33-5rem">
+                    <div class="section-title-block">
+                      <h2 class="heading-style-2 title-animation">Everything You Need To <span class="heading-style-2-ht">Scale Intelligence</span></h2>
+                    </div>
+                    <div data-w-id="a2d80a55-e00e-5224-3a11-648502aa340d" class="section-summary-block top-space">
+                      <p class="text-size-large">Aura AI combines cutting-edge machine learning with a user-friendly interface to help you make better decisions.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="features-content-block is-desktop">
+                  <FeatureCollection features={features} wId="a2d80a55-e00e-5224-3a11-648502aa3414" />
+                </div>
+                <FeatureSlider features={features} />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section_process">
+          <div class="section-gap">
+            <div class="w-layout-blockcontainer container-main w-container">
+              <div class="process-wrapper">
+                <div class="process-heading-block">
+                  <div class="section-heading-block">
+                    <div class="section-subtitle-block"><img src="/images/subtitle-icon.svg" loading="lazy" alt="subtitle-icon" class="subtitle-icon">
+                      <div class="text-size-small text-weight-medium text-color-white">Process</div>
+                    </div>
+                    <div class="section-title-block top-space">
+                      <h2 class="heading-style-2 title-animation">Up And Running In 3 <span class="heading-style-2-ht">Simple Steps</span></h2>
+                    </div>
+                    <div class="section-summary-block top-space">
+                      <p class="text-size-large">No technical knowledge required. Watch each step light up as you scroll!</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="process-content-block">
+                  <div class="process-cards-block">
+                    <div data-w-id="5ad9b074-b7da-cd28-d125-ae5644672075" style="opacity:0;-webkit-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);filter:blur(12px)" class="process-single-card-block">
+                      <div class="process-card-title-block">
+                        <div class="process-card-number">01</div>
+                        <h3 class="heading-style-5">Connect Your Data</h3>
+                      </div>
+                      <div class="process-card-summary-block">
+                        <p class="text-size-regular">Easily integrate with your existing tech stack, from CRM to data warehouses.</p>
+                      </div>
+                      <div class="process-card-image-block"><img src="/images/process-image-1_1process-image-1.avif" loading="lazy" alt="process-card-image" class="process-card-image"></div>
+                    </div>
+                    <div class="process-single-card-block is-2">
+                      <div class="process-card-title-block">
+                        <div class="process-card-number">02</div>
+                        <h3 class="heading-style-5">Configure Aura</h3>
+                      </div>
+                      <div class="process-card-summary-block">
+                        <p class="text-size-regular">Choose from pre-built models or train your own with our simple fine-tuning tool.</p>
+                      </div>
+                      <div class="process-card-image-block"><img src="/images/process-image-2_1process-image-2.avif" loading="lazy" alt="process-card-image" class="process-card-image"></div>
+                    </div>
+                    <div class="process-single-card-block">
+                      <div class="process-card-title-block">
+                        <div class="process-card-number">03</div>
+                        <h3 class="heading-style-5">Generate Insights</h3>
+                      </div>
+                      <div class="process-card-summary-block">
+                        <p class="text-size-regular">Receive actionable reports and automate workflows based on AI-driven data.</p>
+                      </div>
+                      <div class="process-card-image-block"><img src="/images/process-image-3_1process-image-3.avif" loading="lazy" alt="process-card-image" class="process-card-image"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section_case-study">
+          <div class="section-gap">
+            <div class="w-layout-blockcontainer container-main w-container">
+              <div class="case-study-wrapper">
+                <div class="section-heading-block top-flex">
+                  <div class="section-subtitle-block large"><img loading="lazy" src="/images/subtitle-icon.svg" alt="subtitle-icon" class="subtitle-icon">
+                    <div class="text-size-small text-weight-medium text-color-white">Case Study</div>
+                  </div>
+                  <div class="section-heading-text-block max-width-33-5rem">
+                    <div class="section-title-block">
+                      <h2 class="heading-style-2 title-animation">Simple, Yet Powerful</h2>
+                    </div>
+                    <div class="section-summary-block top-space">
+                      <p class="text-size-large">Aura AI combines cutting-edge machine learning with a user-friendly interface to help you make better decisions.</p>
+                    </div>
+                  </div>
+                </div>
+                <div data-w-id="e0d0e35d-78c0-4eb8-0bd5-4e6179fcc27e" class="case-study-content-block">
+                  <CaseStudyCollection portfolio={portfolios[0]} position={1} cardWId="e0d0e35d-78c0-4eb8-0bd5-4e6179fcc27f" buttonWId="186ac199-fbe9-7a98-7080-8d7802ed4b0e" />
+                  <CaseStudyCollection portfolio={portfolios[1]} position={2} buttonWId="ad3f79bf-5bde-1996-aaec-d4ca98c5800e" />
+                  <CaseStudyCollection portfolio={portfolios[2]} position={3} buttonWId="d882dd7f-7cc0-3457-77aa-b7c19de9ad26" />
+                  <CaseStudyCollection portfolio={portfolios[3]} position={4} buttonWId="48eab448-fce4-05b0-1ba3-813c50a5cad6" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section_users">
+          <div class="section-gap">
+            <div class="w-layout-blockcontainer container-main w-container">
+              <div class="users-wrapper">
+                <div class="section-heading-block align-center">
+                  <div class="section-subtitle-block align-center"><img src="/images/subtitle-icon.svg" loading="lazy" alt="subtitle-icon" class="subtitle-icon">
+                    <div class="text-size-small text-weight-medium text-color-white">Works With Your Apps</div>
+                  </div>
+                  <div class="section-title-block top-space max-width-28-5rem">
+                    <h2 class="heading-style-2 text-align-middle title-animation">Connects To Apps <span class="heading-style-2-ht">You Already Know</span></h2>
+                  </div>
+                  <div class="section-summary-block top-space max-width-29rem">
+                    <p class="text-size-large text-align-middle">Search for your favorite apps and try connecting them. Click &quot;Connect&quot; to see how easy it is!</p>
+                  </div>
+                </div>
+                <div class="users-content-block">
+                  <div class="users-logos-block">
+                    <div class="user-single-logo-block"><img src="/images/Logo-1_1.svg" loading="lazy" alt="user-single-logo" class="user-single-logo"></div>
+                    <div class="user-single-logo-block"><img src="/images/Logo-1_1.svg" loading="lazy" alt="user-single-logo" class="user-single-logo"></div>
+                    <div class="user-single-logo-block last-2"><img src="/images/Logo-5.svg" loading="lazy" alt="user-single-logo" class="user-single-logo"></div>
+                    <div class="user-single-logo-block last"><img src="/images/Logo-3.svg" loading="lazy" alt="user-single-logo" class="user-single-logo"></div>
+                  </div>
+                  <div class="users-logos-block is-2">
+                    <div class="user-single-logo-block"><img src="/images/Logo-3.svg" loading="lazy" alt="user-single-logo" class="user-single-logo"></div>
+                    <div class="user-single-logo-block"><img src="/images/Logo-4.svg" loading="lazy" alt="user-single-logo" class="user-single-logo"></div>
+                    <div class="user-single-logo-block"><img src="/images/Logo-4.svg" loading="lazy" alt="user-single-logo" class="user-single-logo"></div>
+                    <div class="user-single-logo-block last-2"><img src="/images/Logo-1_1.svg" loading="lazy" alt="user-single-logo" class="user-single-logo"></div>
+                    <div class="user-single-logo-block last"><img src="/images/Logo-3.svg" loading="lazy" alt="user-single-logo" class="user-single-logo"></div>
+                  </div>
+                  <div class="users-logos-block">
+                    <div class="user-single-logo-block"><img src="/images/Logo-3.svg" loading="lazy" alt="user-single-logo" class="user-single-logo"></div>
+                    <div class="user-single-logo-block"><img src="/images/Logo-5.svg" loading="lazy" alt="user-single-logo" class="user-single-logo"></div>
+                    <div class="user-single-logo-block last-2"><img src="/images/Logo-3.svg" loading="lazy" alt="user-single-logo" class="user-single-logo"></div>
+                    <div class="user-single-logo-block last"><img src="/images/Logo-5.svg" loading="lazy" alt="user-single-logo" class="user-single-logo"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section_pricing">
+          <div class="section-gap">
+            <div class="w-layout-blockcontainer container-main w-container">
+              <div class="pricign-wrapper">
+                <div class="section-heading-block align-center">
+                  <div class="section-subtitle-block align-center"><img loading="lazy" src="/images/subtitle-icon.svg" alt="subtitle-icon" class="subtitle-icon">
+                    <div class="text-size-small text-weight-medium text-color-white">Pricing</div>
+                  </div>
+                  <div class="section-title-block top-space max-width-28rem">
+                    <h2 class="heading-style-2 text-align-middle title-animation">Simple, <span class="heading-style-2-ht">Transparent Pricing</span></h2>
+                  </div>
+                  <div class="section-summary-block top-space">
+                    <p class="text-size-large text-align-middle">Three steps to a smarter, more efficient business.</p>
+                  </div>
+                </div>
+                <div class="pricing-content-block">
+                  <div data-w-id="f3354eb8-3998-e4b2-e0b3-aa85edb2f2af" class="pricing-card-block">
+                    <div class="pricing-card-subtitle-block">
+                      <h3 class="heading-style-5">Starter</h3>
+                    </div>
+                    <div class="pricing-card-price-block">
+                      <div class="heading-style-1 text-color-white text-weight-medium text-line-hight-1">$0</div>
+                      <p class="heading-style-6 text-color-white-0-8">/month</p>
+                    </div>
+                    <div class="pricing-card-summary-block">
+                      <p class="text-size-regular text-color-white-0-8">Perfect for exploring Aura&#x27;s capabilities.</p>
+                    </div>
+                    <div class="pricing-card-list-block">
+                      <ul role="list" class="pricing-card-list">
+                        <li class="pricing-card-list-item">100 AI operations / mo</li>
+                        <li class="pricing-card-list-item">Standard GPU access</li>
+                        <li class="pricing-card-list-item">Community support</li>
+                        <li class="pricing-card-list-item">Basic analytics</li>
+                        <li class="pricing-card-list-item">1 user license</li>
+                      </ul>
+                    </div>
+                    <div class="pricing-card-button-block">
+                      <a href="/contact" class="pricing-card-button w-inline-block">
+                        <div class="pricing-button-icon w-embed"><svg width="31" height="16" viewbox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 1.2931C0 0.578942 0.578942 0 1.2931 0H7C11.4183 0 15 3.58172 15 8C15 12.4183 11.4183 16 7 16H1.2931C0.578942 16 0 15.4211 0 14.7069V1.2931Z" fill="currentColor"></path>
+                            <path d="M15 0.689655C15 0.308769 15.3088 0 15.6897 0C19.727 0 23 3.27295 23 7.31034V8.68966C23 12.727 19.727 16 15.6897 16C15.3088 16 15 15.6912 15 15.3103V0.689655Z" fill="currentColor"></path>
+                            <path d="M23 0.689655C23 0.308769 23.3088 0 23.6897 0C27.727 0 31 3.27295 31 7.31034V8.68966C31 12.727 27.727 16 23.6897 16C23.3088 16 23 15.6912 23 15.3103V0.689655Z" fill="currentColor"></path>
+                          </svg></div>
+                        <div class="pricing-button-text">Start for free</div>
+                        <div class="button-background-block"></div>
+                      </a>
+                    </div>
+                  </div>
+                  <div data-w-id="f3354eb8-3998-e4b2-e0b3-aa85edb2f2cc" class="pricing-card-block is-2">
+                    <div class="pricing-card-subtitle-block">
+                      <h3 class="heading-style-5">Starter</h3>
+                      <div class="popular">Popular</div>
+                    </div>
+                    <div class="pricing-card-price-block">
+                      <div class="heading-style-1 text-color-white text-weight-medium text-line-hight-1">$49</div>
+                      <p class="heading-style-6 text-color-white-0-8">/month</p>
+                    </div>
+                    <div class="pricing-card-summary-block">
+                      <p class="text-size-regular text-color-white-0-8">Perfect for exploring Aura&#x27;s capabilities.</p>
+                    </div>
+                    <div class="pricing-card-list-block">
+                      <ul role="list" class="pricing-card-list">
+                        <li class="pricing-card-list-item">100 AI operations / mo</li>
+                        <li class="pricing-card-list-item">Standard GPU access</li>
+                        <li class="pricing-card-list-item">Community support</li>
+                        <li class="pricing-card-list-item">Basic analytics</li>
+                        <li class="pricing-card-list-item">1 user license</li>
+                      </ul>
+                    </div>
+                    <div class="pricing-card-button-block">
+                      <a href="/contact" class="pricing-card-button w-inline-block">
+                        <div class="pricing-button-icon w-embed"><svg width="31" height="16" viewbox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 1.2931C0 0.578942 0.578942 0 1.2931 0H7C11.4183 0 15 3.58172 15 8C15 12.4183 11.4183 16 7 16H1.2931C0.578942 16 0 15.4211 0 14.7069V1.2931Z" fill="currentColor"></path>
+                            <path d="M15 0.689655C15 0.308769 15.3088 0 15.6897 0C19.727 0 23 3.27295 23 7.31034V8.68966C23 12.727 19.727 16 15.6897 16C15.3088 16 15 15.6912 15 15.3103V0.689655Z" fill="currentColor"></path>
+                            <path d="M23 0.689655C23 0.308769 23.3088 0 23.6897 0C27.727 0 31 3.27295 31 7.31034V8.68966C31 12.727 27.727 16 23.6897 16C23.3088 16 23 15.6912 23 15.3103V0.689655Z" fill="currentColor"></path>
+                          </svg></div>
+                        <div class="pricing-button-text">Start for free</div>
+                        <div class="button-background-block"></div>
+                      </a>
+                    </div>
+                  </div>
+                  <div data-w-id="f3354eb8-3998-e4b2-e0b3-aa85edb2f2eb" class="pricing-card-block">
+                    <div class="pricing-card-subtitle-block">
+                      <h3 class="heading-style-5">Starter</h3>
+                    </div>
+                    <div class="pricing-card-price-block">
+                      <div class="heading-style-1 text-color-white text-weight-medium text-line-hight-1">$0</div>
+                      <p class="heading-style-6 text-color-white-0-8">/month</p>
+                    </div>
+                    <div class="pricing-card-summary-block">
+                      <p class="text-size-regular text-color-white-0-8">Perfect for exploring Aura&#x27;s capabilities.</p>
+                    </div>
+                    <div class="pricing-card-list-block">
+                      <ul role="list" class="pricing-card-list">
+                        <li class="pricing-card-list-item">Unlimited AI operations / mo</li>
+                        <li class="pricing-card-list-item">Standard GPU access</li>
+                        <li class="pricing-card-list-item">Community support</li>
+                        <li class="pricing-card-list-item">Basic analytics</li>
+                        <li class="pricing-card-list-item">Unlimited user license</li>
+                      </ul>
+                    </div>
+                    <div class="pricing-card-button-block">
+                      <a href="/contact" class="pricing-card-button w-inline-block">
+                        <div class="pricing-button-icon w-embed"><svg width="31" height="16" viewbox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 1.2931C0 0.578942 0.578942 0 1.2931 0H7C11.4183 0 15 3.58172 15 8C15 12.4183 11.4183 16 7 16H1.2931C0.578942 16 0 15.4211 0 14.7069V1.2931Z" fill="currentColor"></path>
+                            <path d="M15 0.689655C15 0.308769 15.3088 0 15.6897 0C19.727 0 23 3.27295 23 7.31034V8.68966C23 12.727 19.727 16 15.6897 16C15.3088 16 15 15.6912 15 15.3103V0.689655Z" fill="currentColor"></path>
+                            <path d="M23 0.689655C23 0.308769 23.3088 0 23.6897 0C27.727 0 31 3.27295 31 7.31034V8.68966C31 12.727 27.727 16 23.6897 16C23.3088 16 23 15.6912 23 15.3103V0.689655Z" fill="currentColor"></path>
+                          </svg></div>
+                        <div class="pricing-button-text">Contact Us</div>
+                        <div class="button-background-block"></div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section_our-result">
+          <div class="section-gap">
+            <div class="w-layout-blockcontainer container-main w-container">
+              <div class="our-result-wrapper">
+                <div class="section-heading-block top-flex">
+                  <div class="section-subtitle-block"><img src="/images/subtitle-icon.svg" loading="lazy" alt="subtitle-icon" class="subtitle-icon">
+                    <div class="text-size-small text-weight-medium text-color-white">Numbers</div>
+                  </div>
+                  <div class="section-heading-text-block max-width-33-5rem">
+                    <div class="section-title-block">
+                      <h2 class="heading-style-2 title-animation">Our Result</h2>
+                    </div>
+                    <div class="section-summary-block top-space">
+                      <p class="text-size-large">Aura AI combines cutting-edge machine learning with a user-friendly interface to help you make better decisions.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="our-result-content-block">
+                  <div class="our-result-card-block">
+                    <div class="our-result-card-text-block">
+                      <h3 class="heading-style-5">Faster Results</h3>
+                      <p class="text-size-regular">vs traditional tools</p>
+                    </div>
+                    <div class="our-result-card-number-block">
+                      <div class="result-number counter-anim">32x</div>
+                    </div>
+                  </div>
+                  <div class="our-result-card-block is-2">
+                    <div class="our-result-card-text-block">
+                      <h3 class="heading-style-5">Uptime SLA</h3>
+                      <p class="text-size-regular">enterprise reliability</p>
+                    </div>
+                    <div class="our-result-card-number-block">
+                      <div class="result-number counter-anim">99.9%</div>
+                    </div>
+                  </div>
+                  <div class="our-result-card-block is-3">
+                    <div class="our-result-card-text-block">
+                      <h3 class="heading-style-5">Integrations</h3>
+                      <p class="text-size-regular">and growing weekly</p>
+                    </div>
+                    <div class="our-result-card-number-block">
+                      <div class="result-number counter-anim">200+</div>
+                    </div>
+                  </div>
+                  <div class="our-result-card-block is-4">
+                    <div class="our-result-card-text-block">
+                      <h3 class="heading-style-5">Teams</h3>
+                      <p class="text-size-regular">trust Gridora</p>
+                    </div>
+                    <div class="our-result-card-number-block">
+                      <div class="result-number counter-anim">2K+</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section_testimonial">
+          <div class="section-gap">
+            <div class="w-layout-blockcontainer container-main w-container">
+              <div class="testimonial-wrapper">
+                <div class="section-heading-block top-flex">
+                  <div class="section-subtitle-block"><img src="/images/subtitle-icon.svg" loading="lazy" alt="subtitle-icon" class="subtitle-icon">
+                    <div class="text-size-small text-weight-medium text-color-white">Testimonial</div>
+                  </div>
+                  <div class="section-heading-text-block max-width-33-5rem">
+                    <div class="section-title-block">
+                      <h2 class="heading-style-2 title-animation">Loved By Teams <span class="heading-style-2-ht">Everywhere</span></h2>
+                    </div>
+                    <div class="section-summary-block top-space max-width-21-5rem">
+                      <p class="text-size-large">Join thousands of teams already using Gridora to transform their workflow.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-content-block">
+                  <div data-delay="4000" data-animation="slide" class="testimonial-slider-block w-slider" data-autoplay="false" data-easing="ease" style="opacity:0;-webkit-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);filter:blur(12px)" data-hide-arrows="false" data-disable-swipe="false" data-w-id="b10e0b87-b154-ee1b-aa80-31a4e42c8086" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+                    <div class="testimonial-slider-mask w-slider-mask">
+                      <div class="testimonial-slide-block w-slide">
+                        <div class="testimonial-slide-content">
+                          <div class="testimonial-rating-block">
+                            <div class="testimonial-rating-star-block"><img src="/images/testimonial-star-icon-2.svg" loading="lazy" alt="testimonial-rating-star" class="testimonial-rating-star"><img src="/images/testimonial-star-icon-2.svg" loading="lazy" alt="testimonial-rating-star" class="testimonial-rating-star"><img src="/images/testimonial-star-icon-2.svg" loading="lazy" alt="testimonial-rating-star" class="testimonial-rating-star"><img src="/images/testimonial-star-icon-2.svg" loading="lazy" alt="testimonial-rating-star" class="testimonial-rating-star"><img src="/images/testimonial-star-icon-2.svg" loading="lazy" alt="testimonial-rating-star" class="testimonial-rating-star"></div>
+                            <div class="testimonial-date-block">
+                              <div class="text-size-regular">15 May 2020 9:30 am</div>
+                            </div>
+                          </div>
+                          <div class="testimonial-text-block">
+                            <div class="testimonial-text">Our interface is built by designers, for everyone. No steep learning curves, just powerful tools at your fingertips.</div>
+                          </div>
+                          <div class="testimonial-client-block">
+                            <div class="testimonial-client-avatar-block"><img src="/images/hero-rating-avatar-3_1hero-rating-avatar-3.avif" loading="lazy" alt="testimonial-client-avatar" class="testimonial-client-avatar"></div>
+                            <div class="testimonial-client-info-block">
+                              <div class="heading-style-6 text-color-white">Leslie Alexander</div>
+                              <p class="text-size-small">Position</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonial-slide-block w-slide">
+                        <div class="testimonial-slide-content">
+                          <div class="testimonial-rating-block">
+                            <div class="testimonial-rating-star-block"><img src="/images/testimonial-star-icon-2.svg" loading="lazy" alt="testimonial-rating-star" class="testimonial-rating-star"><img src="/images/testimonial-star-icon-2.svg" loading="lazy" alt="testimonial-rating-star" class="testimonial-rating-star"><img src="/images/testimonial-star-icon-2.svg" loading="lazy" alt="testimonial-rating-star" class="testimonial-rating-star"><img src="/images/testimonial-star-icon-2.svg" loading="lazy" alt="testimonial-rating-star" class="testimonial-rating-star"><img src="/images/testimonial-star-icon-2.svg" loading="lazy" alt="testimonial-rating-star" class="testimonial-rating-star"></div>
+                            <div class="testimonial-date-block">
+                              <div class="text-size-regular">15 May 2020 9:30 am</div>
+                            </div>
+                          </div>
+                          <div class="testimonial-text-block">
+                            <div class="testimonial-text">Our interface is built by designers, for everyone. No steep learning curves, just powerful tools at your fingertips.</div>
+                          </div>
+                          <div class="testimonial-client-block">
+                            <div class="testimonial-client-avatar-block"><img src="/images/hero-rating-avatar-3_1hero-rating-avatar-3.avif" loading="lazy" alt="testimonial-client-avatar" class="testimonial-client-avatar"></div>
+                            <div class="testimonial-client-info-block">
+                              <div class="heading-style-6 text-color-white">Leslie Alexander</div>
+                              <p class="text-size-small">Position</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonial-slide-block w-slide">
+                        <div class="testimonial-slide-content">
+                          <div class="testimonial-rating-block">
+                            <div class="testimonial-rating-star-block"><img src="/images/testimonial-star-icon-2.svg" loading="lazy" alt="testimonial-rating-star" class="testimonial-rating-star"><img src="/images/testimonial-star-icon-2.svg" loading="lazy" alt="testimonial-rating-star" class="testimonial-rating-star"><img src="/images/testimonial-star-icon-2.svg" loading="lazy" alt="testimonial-rating-star" class="testimonial-rating-star"><img src="/images/testimonial-star-icon-2.svg" loading="lazy" alt="testimonial-rating-star" class="testimonial-rating-star"><img src="/images/testimonial-star-icon-2.svg" loading="lazy" alt="testimonial-rating-star" class="testimonial-rating-star"></div>
+                            <div class="testimonial-date-block">
+                              <div class="text-size-regular">15 May 2020 9:30 am</div>
+                            </div>
+                          </div>
+                          <div class="testimonial-text-block">
+                            <div class="testimonial-text">Our interface is built by designers, for everyone. No steep learning curves, just powerful tools at your fingertips.</div>
+                          </div>
+                          <div class="testimonial-client-block">
+                            <div class="testimonial-client-avatar-block"><img src="/images/hero-rating-avatar-3_1hero-rating-avatar-3.avif" loading="lazy" alt="testimonial-client-avatar" class="testimonial-client-avatar"></div>
+                            <div class="testimonial-client-info-block">
+                              <div class="heading-style-6 text-color-white">Leslie Alexander</div>
+                              <p class="text-size-small">Position</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonial-slide-block w-slide">
+                        <div class="testimonial-slide-content">
+                          <div class="testimonial-rating-block">
+                            <div class="testimonial-rating-star-block"><img src="/images/testimonial-star-icon-2.svg" loading="lazy" alt="testimonial-rating-star" class="testimonial-rating-star"><img src="/images/testimonial-star-icon-2.svg" loading="lazy" alt="testimonial-rating-star" class="testimonial-rating-star"><img src="/images/testimonial-star-icon-2.svg" loading="lazy" alt="testimonial-rating-star" class="testimonial-rating-star"><img src="/images/testimonial-star-icon-2.svg" loading="lazy" alt="testimonial-rating-star" class="testimonial-rating-star"><img src="/images/testimonial-star-icon-2.svg" loading="lazy" alt="testimonial-rating-star" class="testimonial-rating-star"></div>
+                            <div class="testimonial-date-block">
+                              <div class="text-size-regular">15 May 2020 9:30 am</div>
+                            </div>
+                          </div>
+                          <div class="testimonial-text-block">
+                            <div class="testimonial-text">Our interface is built by designers, for everyone. No steep learning curves, just powerful tools at your fingertips.</div>
+                          </div>
+                          <div class="testimonial-client-block">
+                            <div class="testimonial-client-avatar-block"><img src="/images/hero-rating-avatar-3_1hero-rating-avatar-3.avif" loading="lazy" alt="testimonial-client-avatar" class="testimonial-client-avatar"></div>
+                            <div class="testimonial-client-info-block">
+                              <div class="heading-style-6 text-color-white">Leslie Alexander</div>
+                              <p class="text-size-small">Position</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="testimonial-icon-block"><img src="/images/testimonial-icon-3.svg" loading="lazy" alt="testimonial-icon" class="testimonial-icon"></div>
+                    <div class="testimonial-slider-arrow w-slider-arrow-left">
+                      <div class="testimonial-slider-icon w-embed"><svg width="8" height="14" viewbox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.75 0.75C6.75 0.75 0.75001 5.1689 0.75 6.75C0.74999 8.3312 6.75 12.75 6.75 12.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></div>
+                    </div>
+                    <div class="testimonial-slider-arrow right w-slider-arrow-right">
+                      <div class="testimonial-slider-icon w-embed"><svg width="8" height="14" viewbox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.75 0.75C0.75 0.75 6.74999 5.1689 6.75 6.75C6.75001 8.3312 0.75 12.75 0.75 12.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></div>
+                    </div>
+                    <div class="testimonial-slider-nav w-slider-nav w-round"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section_faq">
+          <div class="section-gap">
+            <div class="w-layout-blockcontainer container-main w-container">
+              <div class="faq-wrapper">
+                <div class="faq-heading-block">
+                  <div class="section-heading-block">
+                    <div class="section-subtitle-block"><img loading="lazy" src="/images/subtitle-icon.svg" alt="subtitle-icon" class="subtitle-icon">
+                      <div class="text-size-small text-weight-medium text-color-white">Process</div>
+                    </div>
+                    <div class="section-title-block top-space max-width-20rem">
+                      <h2 class="heading-style-2 title-animation">Frequently <span class="heading-style-2-ht">Ask Question</span></h2>
+                    </div>
+                    <div class="section-summary-block top-space">
+                      <p class="text-size-large">Have questions? We’ve got the answers. Our FAQ section is designed to give you quick and clear information.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="faq-content-block">
+                  <div data-w-id="2296c4a0-5e91-b238-bd38-ff1de7a8a0c9" class="faq-dropdown-block">
+                    <div class="faq-dropdown-question-block">
+                      <h3 class="heading-style-5 none-capitalize">Do I need to be technical to use Gridora?</h3>
+                      <div class="faq-dropdown-icon-block">
+                        <div class="faq-icon-line"></div>
+                        <div class="faq-icon-line is-2"></div>
+                      </div>
+                    </div>
+                    <div class="faq-dropdown-ans-block">
+                      <div class="faq-dropdown-ans-inner">
+                        <p class="text-size-large">Not at all! Gridora is designed for people who aren&#x27;t tech experts. You just type your question in plain English — the same way you&#x27;d ask a colleague — and Gridora gives you a clear, simple answer. There&#x27;s nothing to configure, no code to write, and no special skills needed.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-w-id="2296c4a0-5e91-b238-bd38-ff1de7a8a0d4" class="faq-dropdown-block">
+                    <div class="faq-dropdown-question-block">
+                      <h3 class="heading-style-5 none-capitalize">How does it actually work?</h3>
+                      <div class="faq-dropdown-icon-block">
+                        <div class="faq-icon-line"></div>
+                        <div class="faq-icon-line is-2"></div>
+                      </div>
+                    </div>
+                    <div class="faq-dropdown-ans-block">
+                      <div class="faq-dropdown-ans-inner">
+                        <p class="text-size-large">Not at all! Gridora is designed for people who aren&#x27;t tech experts. You just type your question in plain English — the same way you&#x27;d ask a colleague — and Gridora gives you a clear, simple answer. There&#x27;s nothing to configure, no code to write, and no special skills needed.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-w-id="2296c4a0-5e91-b238-bd38-ff1de7a8a0df" class="faq-dropdown-block">
+                    <div class="faq-dropdown-question-block">
+                      <h3 class="heading-style-5 none-capitalize">Is my information safe?</h3>
+                      <div class="faq-dropdown-icon-block">
+                        <div class="faq-icon-line"></div>
+                        <div class="faq-icon-line is-2"></div>
+                      </div>
+                    </div>
+                    <div class="faq-dropdown-ans-block">
+                      <div class="faq-dropdown-ans-inner">
+                        <p class="text-size-large">Not at all! Gridora is designed for people who aren&#x27;t tech experts. You just type your question in plain English — the same way you&#x27;d ask a colleague — and Gridora gives you a clear, simple answer. There&#x27;s nothing to configure, no code to write, and no special skills needed.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-w-id="2296c4a0-5e91-b238-bd38-ff1de7a8a0ea" class="faq-dropdown-block">
+                    <div class="faq-dropdown-question-block">
+                      <h3 class="heading-style-5 none-capitalize">What kind of apps can I connect?</h3>
+                      <div class="faq-dropdown-icon-block">
+                        <div class="faq-icon-line"></div>
+                        <div class="faq-icon-line is-2"></div>
+                      </div>
+                    </div>
+                    <div class="faq-dropdown-ans-block">
+                      <div class="faq-dropdown-ans-inner">
+                        <p class="text-size-large">Not at all! Gridora is designed for people who aren&#x27;t tech experts. You just type your question in plain English — the same way you&#x27;d ask a colleague — and Gridora gives you a clear, simple answer. There&#x27;s nothing to configure, no code to write, and no special skills needed.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-w-id="2296c4a0-5e91-b238-bd38-ff1de7a8a0f5" class="faq-dropdown-block">
+                    <div class="faq-dropdown-question-block">
+                      <h3 class="heading-style-5 none-capitalize">How much does it cost?</h3>
+                      <div class="faq-dropdown-icon-block">
+                        <div class="faq-icon-line"></div>
+                        <div class="faq-icon-line is-2"></div>
+                      </div>
+                    </div>
+                    <div class="faq-dropdown-ans-block">
+                      <div class="faq-dropdown-ans-inner">
+                        <p class="text-size-large">Not at all! Gridora is designed for people who aren&#x27;t tech experts. You just type your question in plain English — the same way you&#x27;d ask a colleague — and Gridora gives you a clear, simple answer. There&#x27;s nothing to configure, no code to write, and no special skills needed.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-w-id="2296c4a0-5e91-b238-bd38-ff1de7a8a100" class="faq-dropdown-block">
+                    <div class="faq-dropdown-question-block">
+                      <h3 class="heading-style-5 none-capitalize">What if I need help getting set up?</h3>
+                      <div class="faq-dropdown-icon-block">
+                        <div class="faq-icon-line"></div>
+                        <div class="faq-icon-line is-2"></div>
+                      </div>
+                    </div>
+                    <div class="faq-dropdown-ans-block">
+                      <div class="faq-dropdown-ans-inner">
+                        <p class="text-size-large">Not at all! Gridora is designed for people who aren&#x27;t tech experts. You just type your question in plain English — the same way you&#x27;d ask a colleague — and Gridora gives you a clear, simple answer. There&#x27;s nothing to configure, no code to write, and no special skills needed.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-w-id="2296c4a0-5e91-b238-bd38-ff1de7a8a10b" class="faq-dropdown-block">
+                    <div class="faq-dropdown-question-block">
+                      <h3 class="heading-style-5 none-capitalize">Can I cancel anytime?</h3>
+                      <div class="faq-dropdown-icon-block">
+                        <div class="faq-icon-line"></div>
+                        <div class="faq-icon-line is-2"></div>
+                      </div>
+                    </div>
+                    <div class="faq-dropdown-ans-block">
+                      <div class="faq-dropdown-ans-inner">
+                        <p class="text-size-large">Not at all! Gridora is designed for people who aren&#x27;t tech experts. You just type your question in plain English — the same way you&#x27;d ask a colleague — and Gridora gives you a clear, simple answer. There&#x27;s nothing to configure, no code to write, and no special skills needed.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section_cta">
+          <div class="section-gap">
+            <div class="w-layout-blockcontainer container-main w-container">
+              <div class="cta-wrapper">
+                <div class="cta-content-block">
+                  <div data-w-id="53cb5297-990c-9364-7ad8-fd5810eb3b07" class="cta-title-block">
+                    <h2 class="heading-style-2 text-align-center text-color-heading-color title-animation">Ready To Build The Future Of Your Business?</h2>
+                  </div>
+                  <div data-w-id="53cb5297-990c-9364-7ad8-fd5810eb3b0a" class="cta-summary-block">
+                    <p class="text-size-large text-align-middle text-color-heading-color-0-8">Join 10,000+ companies who use Aura AI to scale their intelligence and automate their workflows.</p>
+                  </div>
+                  <div data-w-id="53cb5297-990c-9364-7ad8-fd5810eb3b0d" class="cta-avatar-block"><img loading="lazy" src="/images/cta-avatar-1.svg" alt="cta-avatar" class="cta-avatar is-1"><img loading="lazy" src="/images/cta-avatar-2.svg" alt="cta-avatar" class="cta-avatar"><img loading="lazy" src="/images/cta-avatar-3.svg" alt="cta-avatar" class="cta-avatar"><img loading="lazy" src="/images/cta-avatar-4.svg" alt="cta-avatar" class="cta-avatar"></div>
+                  <div data-w-id="53cb5297-990c-9364-7ad8-fd5810eb3b12" class="cta-button-block">
+                    <a href="/contact" data-wf--primary-button--variant="varient-3" class="primary-button w-variant-cb037575-caf5-14db-03c9-2aab23927600 w-inline-block">
+                      <div class="button-text-block">
+                        <div class="button-text is-1">Get Started Now</div>
+                        <div class="button-text is-2">Get Started Now</div>
+                      </div>
+                    </a>
+                    <a href="/contact" class="secondary-button w-inline-block">
+                      <div class="button-text-block">
+                        <div class="button-text is-1">Talk to Sales</div>
+                        <div class="button-text is-2">Talk to Sales</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="page-liner-block">
+          <div class="page-liner"></div>
+          <div class="page-liner"></div>
+          <div class="page-liner"></div>
+          <div class="page-liner"></div>
+          <div class="page-liner"></div>
+        </div>
+      </main>
+</Layout>

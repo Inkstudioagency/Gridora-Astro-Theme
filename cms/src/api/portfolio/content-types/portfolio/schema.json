@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "portfolios",
+  "info": {
+    "singularName": "portfolio",
+    "pluralName": "portfolios",
+    "displayName": "Portfolio",
+    "description": "A case study. Drives the home page grid and /portfolio/[slug]."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "summary": {
+      "type": "text"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "solutions": {
+      "type": "text"
+    },
+    "tool": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "client": {
+      "type": "string"
+    },
+    "detailsImage1": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "detailsImage2": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "detailsImage3": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "detailsText": {
+      "type": "richtext"
+    },
+    "keyPoints": {
+      "type": "json"
+    },
+    "challenge": {
+      "type": "text"
+    },
+    "solution": {
+      "type": "text"
+    }
+  }
+}

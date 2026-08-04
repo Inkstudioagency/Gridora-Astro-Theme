@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "features",
+  "info": {
+    "singularName": "feature",
+    "pluralName": "features",
+    "displayName": "Feature",
+    "description": "A product feature. Drives the features grid and /features/[slug]."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "summary": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "detailsTitle": {
+      "type": "string"
+    },
+    "detailsSummary": {
+      "type": "text"
+    },
+    "detailsText": {
+      "type": "richtext"
+    },
+    "processingSpeed": {
+      "type": "string"
+    },
+    "averageResponseTime": {
+      "type": "string"
+    },
+    "concurrentUsers": {
+      "type": "string"
+    },
+    "accuracyRate": {
+      "type": "string"
+    }
+  }
+}

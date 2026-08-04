@@ -1,0 +1,278 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getPortfolios } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const portfolios = await getPortfolios();
+  return portfolios.map((portfolio) => ({ params: { slug: portfolio.slug }, props: { portfolio } }));
+}
+
+const { portfolio } = Astro.props;
+---
+
+<Layout title={`${portfolio.title} || AI technology Astro theme`} description={portfolio.summary} pageId="6a706af464122f0e823f294e">
+      <main class="main-wrapper">
+        <section class="section_breadcrumb">
+          <div class="w-layout-blockcontainer container-main w-container">
+            <div class="breadcrumb-wrapper">
+              <div class="breadcrumb-content-block">
+                <div class="breadcrumb-subtitle-block">
+                  <div class="breadcrumb-subtitle-icon w-embed"><svg width="31" height="16" viewbox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 1.2931C0 0.578942 0.578942 0 1.2931 0H7C11.4183 0 15 3.58172 15 8C15 12.4183 11.4183 16 7 16H1.2931C0.578942 16 0 15.4211 0 14.7069V1.2931Z" fill="white"></path>
+                      <path d="M15 0.689655C15 0.308769 15.3088 0 15.6897 0C19.727 0 23 3.27295 23 7.31034V8.68966C23 12.727 19.727 16 15.6897 16C15.3088 16 15 15.6912 15 15.3103V0.689655Z" fill="white"></path>
+                      <path d="M23 0.689655C23 0.308769 23.3088 0 23.6897 0C27.727 0 31 3.27295 31 7.31034V8.68966C31 12.727 27.727 16 23.6897 16C23.3088 16 23 15.6912 23 15.3103V0.689655Z" fill="white"></path>
+                    </svg></div>
+                  <div class="text-size-small text-weight-medium text-color-white">Case Study Details</div>
+                </div>
+                <div class="breadcrumb-title-block max-width-45rem">
+                  <h1 class="heading-style-1 title-animation">{portfolio.title}</h1>
+                </div>
+                <div class="breadcrumb-summary-block max-width-32-75rem">
+                  <p class="text-size-large text-color-heading-color-0-8">{portfolio.summary}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section_case-study-info">
+          <div class="section-gap">
+            <div class="w-layout-blockcontainer container-main w-container">
+              <div class="case-study-info-wrapper">
+                <div class="case-study-info-content-block">
+                  <div data-w-id="dd4f1e66-e9c3-4baa-e24d-5fd9f20a433b" style="opacity:0;-webkit-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);filter:blur(12px)" class="case-study-info-single-block">
+                    <div class="case-study-info-title-block">
+                      <div class="case-study-info-icon w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8.0013 5.33398C10.9468 5.33398 13.3346 4.43855 13.3346 3.33398C13.3346 2.22941 10.9468 1.33398 8.0013 1.33398C5.05578 1.33398 2.66797 2.22941 2.66797 3.33398C2.66797 4.43855 5.05578 5.33398 8.0013 5.33398Z" stroke="white"></path>
+                          <path d="M4.66797 7.22852C5.06902 7.34912 5.51753 7.44838 6.0013 7.52185" stroke="white"></path>
+                          <path d="M13.3346 8C13.3346 9.1046 10.9468 10 8.0013 10C5.05578 10 2.66797 9.1046 2.66797 8" stroke="white"></path>
+                          <path d="M4.66797 11.8945C5.06902 12.0151 5.51753 12.1144 6.0013 12.1879" stroke="white"></path>
+                          <path d="M13.3346 3.33398V12.6673C13.3346 13.7719 10.9468 14.6673 8.0013 14.6673C5.05578 14.6673 2.66797 13.7719 2.66797 12.6673V3.33398" stroke="white"></path>
+                        </svg></div>
+                      <div class="text-size-xsmall text-color-white">Solutions</div>
+                    </div>
+                    <div class="case-study-info-text-block">
+                      <p class="text-size-regular">{portfolio.solutions}</p>
+                    </div>
+                  </div>
+                  <div data-w-id="1b0da0e0-7e26-0144-0a3a-f3d106e7a0b0" style="opacity:0;-webkit-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);filter:blur(12px)" class="case-study-info-single-block is-2">
+                    <div class="case-study-info-title-block">
+                      <div class="case-study-info-icon w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8.66797 7.33333L12.0013 4" stroke="white"></path>
+                          <path d="M12.6654 4.66732L11.332 3.33398L12.9987 2.33398L13.6654 3.00065L12.6654 4.66732Z" stroke="white"></path>
+                          <path d="M2.68342 5.98325C2.00944 5.30927 1.83397 4.32557 2.15699 3.49032L3.10499 4.43832H4.43832V3.10499L3.49032 2.15699C4.32557 1.83397 5.30927 2.00944 5.98325 2.68342C6.65747 3.35765 6.83287 4.34183 6.50932 5.17729L10.8227 9.49067C11.6582 9.16713 12.6423 9.34253 13.3166 10.0167C13.9905 10.6907 14.1661 11.6744 13.843 12.5097L12.895 11.5617H11.5617V12.895L12.5097 13.843C11.6744 14.1661 10.6907 13.9905 10.0167 13.3166C9.343 12.6429 9.1674 11.6597 9.48993 10.8246L5.17541 6.51005C4.34035 6.8326 3.35714 6.65697 2.68342 5.98325Z" stroke="white"></path>
+                          <path d="M8.13403 9.6673L4.39801 13.4034C4.04613 13.7552 3.47563 13.7552 3.12375 13.4034L2.59594 12.8756C2.24406 12.5237 2.24406 11.9532 2.59594 11.6013L6.33199 7.86523" stroke="white"></path>
+                        </svg></div>
+                      <div class="text-size-xsmall text-color-white">Tool</div>
+                    </div>
+                    <div class="case-study-info-text-block">
+                      <p class="text-size-regular">{portfolio.tool}</p>
+                    </div>
+                  </div>
+                  <div data-w-id="0568ab73-b80a-eb85-7aa4-9ee2d7b2eabe" style="opacity:0;-webkit-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);filter:blur(12px)" class="case-study-info-single-block">
+                    <div class="case-study-info-title-block">
+                      <div class="case-study-info-icon w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.3346 7.33333C10.3346 8.622 9.28997 9.66667 8.0013 9.66667C6.71264 9.66667 5.66797 8.622 5.66797 7.33333C5.66797 6.04467 6.71264 5 8.0013 5C9.28997 5 10.3346 6.04467 10.3346 7.33333Z" stroke="white"></path>
+                          <path d="M8 1.33398C11.2471 1.33398 14 4.02264 14 7.28452C14 10.5983 11.2022 12.9238 8.618 14.5051C8.42967 14.6115 8.21667 14.6673 8 14.6673C7.78333 14.6673 7.57033 14.6115 7.382 14.5051C4.8026 12.9084 2 10.6098 2 7.28452C2 4.02264 4.75296 1.33398 8 1.33398Z" stroke="white"></path>
+                        </svg></div>
+                      <div class="text-size-xsmall text-color-white">Location</div>
+                    </div>
+                    <div class="case-study-info-text-block">
+                      <p class="text-size-regular">{portfolio.location}</p>
+                    </div>
+                  </div>
+                  <div data-w-id="ef2482a4-db1d-2caa-b331-b25e2b286385" style="opacity:0;-webkit-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);filter:blur(12px)" class="case-study-info-single-block is-2">
+                    <div class="case-study-info-title-block">
+                      <div class="case-study-info-icon w-embed"><svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_4069_28556)">
+                            <path d="M9.9987 1.63918C9.36736 1.44088 8.6955 1.33398 7.9987 1.33398C4.3168 1.33398 1.33203 4.31875 1.33203 8.00065C1.33203 11.6825 4.3168 14.6673 7.9987 14.6673C11.6806 14.6673 14.6654 11.6825 14.6654 8.00065C14.6654 7.30385 14.5584 6.63201 14.3602 6.00065" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M10 6.66602C10 7.77062 9.1046 8.66602 8 8.66602C6.8954 8.66602 6 7.77062 6 6.66602C6 5.56145 6.8954 4.66602 8 4.66602C9.1046 4.66602 10 5.56145 10 6.66602Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M3.66797 12.9993L4.04157 12.3455C4.63504 11.307 5.73952 10.666 6.93574 10.666H9.06688C10.2631 10.666 11.3675 11.307 11.961 12.3455L12.3346 12.9993" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M12.6505 1.3483C12.6543 1.32921 12.6817 1.32921 12.6855 1.3483C12.8881 2.33937 13.6626 3.11388 14.6537 3.31644C14.6728 3.32034 14.6728 3.34762 14.6537 3.35153C13.6626 3.55409 12.8881 4.3286 12.6855 5.31966C12.6817 5.33876 12.6543 5.33876 12.6505 5.31966C12.4479 4.3286 11.6734 3.55409 10.6823 3.35153C10.6632 3.34762 10.6632 3.32034 10.6823 3.31644C11.6734 3.11388 12.4479 2.33937 12.6505 1.3483Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </g>
+                          <defs>
+                            <clippath id="clip0_4069_28556">
+                              <rect width="16" height="16" fill="white"></rect>
+                            </clippath>
+                          </defs>
+                        </svg></div>
+                      <div class="text-size-xsmall text-color-white">Client</div>
+                    </div>
+                    <div class="case-study-info-text-block">
+                      <p class="text-size-regular">{portfolio.client}</p>
+                    </div>
+                  </div>
+                </div>
+                <div data-w-id="ecf1a9c7-db6c-19fb-aad2-c14963153a39" class="case-study-details-image-block">
+                  <div data-w-id="4ebd7712-ce1e-628a-d1cf-e4227b0f1d71" style="opacity:0;-webkit-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);filter:blur(12px)" class="case-study-image-sticky-block">
+                    <div class="case-study-single-image-block is-1"><img src={portfolio.detailsImage1} loading="lazy" class="case-study-single-image" alt={portfolio.title}></div>
+                    <div class="case-study-single-image-block is-2"><img src={portfolio.detailsImage2} loading="lazy" class="case-study-single-image" alt={portfolio.title}></div>
+                    <div class="case-study-single-image-block is-3"><img src={portfolio.detailsImage3} loading="lazy" class="case-study-single-image" alt={portfolio.title}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section_case-study-details">
+          <div class="section-gap">
+            <div class="w-layout-blockcontainer container-main w-container">
+              <div class="case-study-details-wrapper">
+                <div class="case-study-details-content-block">
+                  <div data-w-id="812be8fa-89c6-1c7d-3de5-997c268d4a93" style="opacity:0;-webkit-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);filter:blur(12px)" class="case-study-details-text-block">
+                    <div class="case-study-details-text w-richtext"><Fragment set:html={portfolio.detailsText} /></div>
+                  </div>
+                  <div class="case-study-details-point-block">
+                    <div class="case-study-details-single-point-block">
+                      <p >{portfolio.keyPoints[0]}</p>
+                    </div>
+                    <div class="case-study-details-single-point-block">
+                      <p >{portfolio.keyPoints[1]}</p>
+                    </div>
+                    <div class="case-study-details-single-point-block">
+                      <p >{portfolio.keyPoints[2]}</p>
+                    </div>
+                    <div class="case-study-details-single-point-block">
+                      <p >{portfolio.keyPoints[3]}</p>
+                    </div>
+                    <div class="case-study-details-single-point-block">
+                      <p >{portfolio.keyPoints[4]}</p>
+                    </div>
+                    <div class="case-study-details-single-point-block">
+                      <p >{portfolio.keyPoints[5]}</p>
+                    </div>
+                    <div class="case-study-details-single-point-block">
+                      <p >{portfolio.keyPoints[6]}</p>
+                    </div>
+                    <div class="case-study-details-single-point-block">
+                      <p >{portfolio.keyPoints[7]}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section_our-purpose">
+          <div class="section-gap">
+            <div class="w-layout-blockcontainer container-main w-container">
+              <div class="our-purpose-wrapper">
+                <div class="section-heading-block align-center">
+                  <div class="section-subtitle-block align-center"><img src="/images/subtitle-icon.svg" loading="lazy" alt="subtitle-icon" class="subtitle-icon">
+                    <div class="text-size-small text-weight-medium text-color-white">Overview</div>
+                  </div>
+                </div>
+                <div class="our-purpose-content-block">
+                  <div data-w-id="56e7654d-08d1-3359-f362-3bf06e6de673" style="opacity:0;-webkit-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);filter:blur(12px)" class="our-purpose-text-block is-1">
+                    <div class="our-purpose-title-block">
+                      <h2 class="heading-style-2 text-align-center">The Challenge</h2>
+                    </div>
+                    <div class="our-purpose-summary-block">
+                      <p class="text-size-large text-align-middle">{portfolio.challenge}</p>
+                    </div>
+                  </div>
+                  <div data-w-id="78572252-b1ce-086d-afca-fd9bcaa0fe93" style="opacity:0;-webkit-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 60px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);filter:blur(12px)" class="our-purpose-text-block">
+                    <div class="our-purpose-title-block">
+                      <h2 class="heading-style-2 text-align-center">Our Solution</h2>
+                    </div>
+                    <div class="our-purpose-summary-block">
+                      <p class="text-size-large text-align-middle">{portfolio.solution}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section_our-achievement">
+          <div class="section-gap">
+            <div class="w-layout-blockcontainer container-main w-container">
+              <div class="our-achievement-wrapper">
+                <div class="section-heading-block top-flex">
+                  <div class="section-subtitle-block large"><img loading="lazy" src="/images/subtitle-icon.svg" alt="subtitle-icon" class="subtitle-icon">
+                    <div class="text-size-small text-weight-medium text-color-white">Recognition &amp; Awards</div>
+                  </div>
+                  <div class="section-heading-text-block">
+                    <div class="section-title-block">
+                      <h2 class="heading-style-2">Our Achievement</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="our-achievement-content-block">
+                  <div class="our-achievement-cards-block">
+                    <div class="achievement-single-card-block is-1">
+                      <div class="achievement-card-icon-block">
+                        <div class="achievement-card-icon w-embed"><svg width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.8015 21.645C11.6971 16.0461 11.1449 13.2467 12.3397 10.969C13.5345 8.69127 16.1024 7.64812 21.2381 5.56182L22.2846 5.1367C26.1646 3.56052 28.1046 2.77244 29.2756 3.79022C30.4465 4.80802 30.034 6.92395 29.2091 11.1558L25.5356 30.0007H14.4496L12.8015 21.645Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M10 35C10 32.643 10 31.4645 10.7322 30.7322C11.4645 30 12.643 30 15 30H25C27.357 30 28.5355 30 29.2678 30.7322C30 31.4645 30 32.643 30 35V36.6667H10V35Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M6.66797 36.666H33.3346" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg></div>
+                      </div>
+                      <div class="achievement-card-title-block">
+                        <h3 class="heading-style-5">Best AI Innovation 2025 - FinTech Awards</h3>
+                      </div>
+                      <div class="achievement-card-year-block">
+                        <div class="achievement-card-year">2026</div>
+                      </div>
+                    </div>
+                    <div class="achievement-single-card-block is-2">
+                      <div class="achievement-card-icon-block">
+                        <div class="achievement-card-icon w-embed"><svg width="48" height="48" viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 42C16 39.1716 16 37.7574 16.8787 36.8786C17.7574 36 19.1716 36 22 36H26C28.8284 36 30.2426 36 31.1214 36.8786C32 37.7574 32 39.1716 32 42V44H16V42Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M24 26V36" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M12 44H36" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M26.0732 5.73302L28.185 9.99147C28.4728 10.5842 29.2408 11.1528 29.8888 11.2617L33.7164 11.9029C36.164 12.3142 36.74 14.1047 34.9762 15.871L32.0006 18.8713C31.4966 19.3794 31.2206 20.3592 31.3766 21.061L32.2284 24.775C32.9004 27.7148 31.3526 28.852 28.7728 27.3156L25.1852 25.1742C24.5374 24.787 23.4694 24.787 22.8096 25.1742L19.2219 27.3156C16.6542 28.852 15.0944 27.7026 15.7663 24.775L16.6182 21.061C16.7742 20.3592 16.4982 19.3794 15.9943 18.8713L13.0186 15.871C11.2668 14.1047 11.8307 12.3142 14.2785 11.9029L18.106 11.2617C18.742 11.1528 19.5099 10.5842 19.7979 9.99147L21.9096 5.73302C23.0614 3.42233 24.9332 3.42233 26.0732 5.73302Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg></div>
+                      </div>
+                      <div class="achievement-card-title-block">
+                        <h3 class="heading-style-5">Excellence in Risk Management - Banking Technology</h3>
+                      </div>
+                      <div class="achievement-card-year-block">
+                        <div class="achievement-card-year">2024</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section_cta">
+          <div class="section-gap">
+            <div class="w-layout-blockcontainer container-main w-container">
+              <div class="cta-wrapper">
+                <div class="cta-content-block">
+                  <div data-w-id="53cb5297-990c-9364-7ad8-fd5810eb3b07" class="cta-title-block">
+                    <h2 class="heading-style-2 text-align-center text-color-heading-color title-animation">Ready To Build The Future Of Your Business?</h2>
+                  </div>
+                  <div data-w-id="53cb5297-990c-9364-7ad8-fd5810eb3b0a" class="cta-summary-block">
+                    <p class="text-size-large text-align-middle text-color-heading-color-0-8">Join 10,000+ companies who use Aura AI to scale their intelligence and automate their workflows.</p>
+                  </div>
+                  <div data-w-id="53cb5297-990c-9364-7ad8-fd5810eb3b0d" class="cta-avatar-block"><img loading="lazy" src="/images/cta-avatar-1.svg" alt="cta-avatar" class="cta-avatar is-1"><img loading="lazy" src="/images/cta-avatar-2.svg" alt="cta-avatar" class="cta-avatar"><img loading="lazy" src="/images/cta-avatar-3.svg" alt="cta-avatar" class="cta-avatar"><img loading="lazy" src="/images/cta-avatar-4.svg" alt="cta-avatar" class="cta-avatar"></div>
+                  <div data-w-id="53cb5297-990c-9364-7ad8-fd5810eb3b12" class="cta-button-block">
+                    <a href="/contact" data-wf--primary-button--variant="varient-3" class="primary-button w-variant-cb037575-caf5-14db-03c9-2aab23927600 w-inline-block">
+                      <div class="button-text-block">
+                        <div class="button-text is-1">Get Started Now</div>
+                        <div class="button-text is-2">Get Started Now</div>
+                      </div>
+                    </a>
+                    <a href="/contact" class="secondary-button w-inline-block">
+                      <div class="button-text-block">
+                        <div class="button-text is-1">Talk to Sales</div>
+                        <div class="button-text is-2">Talk to Sales</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="page-liner-block">
+          <div class="page-liner"></div>
+          <div class="page-liner"></div>
+          <div class="page-liner"></div>
+          <div class="page-liner"></div>
+          <div class="page-liner"></div>
+        </div>
+      </main>
+</Layout>
