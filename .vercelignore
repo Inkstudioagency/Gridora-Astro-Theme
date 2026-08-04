@@ -1,2 +1,4 @@
 # The Strapi backend is not part of the deployed site.
-cms/
+# The leading slash anchors the pattern to the repo root - without it it also
+# matches public/images/cms/, which holds the collection media.
+/cms

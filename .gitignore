@@ -19,6 +19,9 @@ pnpm-debug.log*
 .env.*
 !.env.example
 
+# Vercel
+.vercel
+
 # Strapi (cms/)
 cms/.tmp/
 cms/.strapi/
