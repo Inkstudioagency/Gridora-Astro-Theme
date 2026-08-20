@@ -51,7 +51,7 @@ cms/                # optional Strapi backend - not needed to run the theme
 
 Stylesheets are imported by `Layout.astro`, so Astro bundles and hashes them
 into a single `/_astro/*.css` file. Every script is self-hosted; the only
-third-party request is the Google Fonts stylesheet.
+third-party requests are the Google Fonts loader and the font files it fetches.
 
 ## Customising
 
@@ -107,6 +107,11 @@ Two details are easy to break when editing:
 
 ## Credits
 
-Mona Sans is loaded from Google Fonts. Scroll and text animations use GSAP
+Mona Sans is loaded from Google Fonts via the Web Font Loader. Scroll and text animations use GSAP
 (with SplitText and ScrollTrigger) and Lenis, all self-hosted in
 `public/js/vendor/`.
+
+## License
+
+MIT - see [LICENSE](LICENSE). GSAP is redistributed under the
+[GSAP standard license](https://gsap.com/standard-license).

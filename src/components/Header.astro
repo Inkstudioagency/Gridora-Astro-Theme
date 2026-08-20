@@ -24,7 +24,7 @@ const cx = (base: string, href: string) => (isCurrent(href) ? `${base} w--curren
           <nav role="navigation" class="nav-menu-content w-nav-menu">
             <div class="nav-link-block">
               <div class="nav-menu-top">
-                <a href="#" class="brand-logo-block w-nav-brand"><img loading="lazy" src="/images/footer-logo-2.svg" alt="footer-logo" class="brand-logo"></a>
+                <a href="/" class="brand-logo-block w-nav-brand"><img loading="lazy" src="/images/footer-logo-2.svg" alt="footer-logo" class="brand-logo"></a>
                 <div class="menu-button-block">
                   <div class="menu-close-button w-nav-button">
                     <div class="menu-button-icon w-icon-nav-menu"></div>
@@ -50,7 +50,6 @@ const cx = (base: string, href: string) => (isCurrent(href) ? `${base} w--curren
                         <a href="/about" aria-current={current('/about')} class={cx('nav-dropdown-link w-dropdown-link', '/about')}>About</a>
                         <a href="/features" aria-current={current('/features')} class={cx('nav-dropdown-link w-dropdown-link', '/features')}>Features</a>
                         <a href="/contact" aria-current={current('/contact')} class={cx('nav-dropdown-link w-dropdown-link', '/contact')}>Contact</a>
-                        <a href="#" class="nav-dropdown-link w-dropdown-link">Instruction</a>
                       </div>
                       <div class="nav-dropdown-column is-2">
                         <div class="nav-dropdown-title">CMS Pages</div>
@@ -60,8 +59,6 @@ const cx = (base: string, href: string) => (isCurrent(href) ? `${base} w--curren
                       <div class="nav-dropdown-column">
                         <div class="nav-dropdown-title">Utility Pages</div>
                         <a href="/style-guide" aria-current={current('/style-guide')} class={cx('nav-dropdown-link w-dropdown-link', '/style-guide')}>Style Guide</a>
-                        <a href="#" class="nav-dropdown-link w-dropdown-link">Changelog</a>
-                        <a href="#" class="nav-dropdown-link w-dropdown-link">Licenses</a>
                         <a href="/404" aria-current={current('/404')} class={cx('nav-dropdown-link w-dropdown-link', '/404')}>Not Found</a>
                         <a href="/password" aria-current={current('/password')} class={cx('nav-dropdown-link w-dropdown-link', '/password')}>Password</a>
                       </div>
@@ -70,7 +67,7 @@ const cx = (base: string, href: string) => (isCurrent(href) ? `${base} w--curren
                 </nav>
               </div>
               <div class="general-button-block is-1">
-                <a href="#" data-wf--primary-button--variant="varient-2" class="primary-button w-variant-c5023870-c223-3ae6-4ada-3b83d947fba3 w-inline-block">
+                <a href="/contact" data-wf--primary-button--variant="varient-2" class="primary-button w-variant-c5023870-c223-3ae6-4ada-3b83d947fba3 w-inline-block">
                   <div class="button-text-block">
                     <div class="button-text is-1">Get Started</div>
                     <div class="button-text is-2">Get Started</div>

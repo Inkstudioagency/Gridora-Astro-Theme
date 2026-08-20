@@ -15,5 +15,6 @@
     "astro": "^7.1.6"
   },
   "description": "Gridora - AI technology Astro theme for startups, automation tools and SaaS platforms.",
+  "license": "MIT",
   "private": true
 }
